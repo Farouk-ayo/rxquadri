@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --gradient-custom: linear-gradient(121.76deg, #ffde59 15.41%, #ff1616 81.48%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-custom-yellow: #ffde59;
+  --color-custom-red: #ff1616;
+  --color-custom-gradient: var(--gradient-custom);
+  --shadow-custom-gradient: 0 10px 25px rgba(255, 222, 89, 0.3),
+    0 6px 12px rgba(255, 22, 22, 0.2);
+}
+
+/* Custom utilities for complex effects */
+.text-custom-gradient {
+  background: var(--gradient-custom);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
