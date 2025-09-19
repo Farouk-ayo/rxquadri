@@ -16,21 +16,31 @@ const Navbar = () => {
 
   return (
     <section
-      className="fixed top-0 h-24 flex flex-row items-center w-full shadow-sm justify-between px-2 sm:px-16 z-20 backdrop-blur-lg"
+      className="fixed top-0 h-24 flex flex-row items-center w-full shadow-sm justify-between px-2 sm:px-16 z-20 backdrop-blur-lg border-b border-white/20"
       data-aos="fade-down"
     >
       <Link
         href="/"
-        className="flex justify-start sm:justify-center items-center  uppercase tracking-wider"
+        className="flex justify-start gap-5 sm:justify-center items-center tracking-wider"
       >
-        <Image src={"/logo.png"} width={100} height={100} alt="logo" />
-        <h1 className="text-3xl sm:text-3xl font-bold lg:text-4xl text-secondary-color-3 font-idgrotesk">
+        <div className="w-9 h-9 relative">
+          <Image
+            src={"/logo.png"}
+            className=" w-full h-full"
+            layout="fill"
+            objectFit="
+            cvoer"
+            alt="logo"
+          />
+        </div>
+
+        <h1 className="text-3xl sm:text-3xl font-semibold lg:text-4xl  text-custom-gradient font-sora">
           RxQu@dri
         </h1>
       </Link>
-      <div className="hidden md:flex items-center gap-2  font-grotesk uppercase">
+      <div className="hidden md:flex items-center gap-6  font-sora ">
         <nav className="w-full flex flex-row items-center">
-          <ul className="w-full flex flex-row justify-start items-center font-semibold text-lg gap-4">
+          <ul className="w-full flex flex-row justify-start items-center font-semibold text-lg gap-8">
             {sections.map((section, id) => (
               <Button
                 variant={"link"}
@@ -44,14 +54,9 @@ const Navbar = () => {
               </Button>
             ))}
             <li className="hidden lg:inline-block">
-              <Button variant={"outline"}>
-                <Link
-                  href="https://docs.google.com/document/d/1EktAf1QQtH6vMP7XUi9i0LLCasbY9IPy7YLwGasTA7k/edit?usp=sharing"
-                  className=" border-[1px] border-black"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Resume
+              <Button variant={"outline"} size="lg">
+                <Link href="#" target="_blank" rel="noopener noreferrer">
+                  Resume
                 </Link>
               </Button>
             </li>

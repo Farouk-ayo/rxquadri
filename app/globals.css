@@ -14,23 +14,57 @@
 }
 
 @theme {
+  --font-rubik: var(--font-rubik), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sora: var(--font-sora), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-custom-yellow: #ffde59;
   --color-custom-red: #ff1616;
-  --color-custom-gradient: var(--gradient-custom);
   --shadow-custom-gradient: 0 10px 25px rgba(255, 222, 89, 0.3),
     0 6px 12px rgba(255, 22, 22, 0.2);
 }
 
-/* Custom utilities for complex effects */
+.border-custom-gradient {
+  position: relative;
+  z-index: 0;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.border-custom-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* border thickness */
+  border-radius: inherit;
+  background: var(--gradient-custom);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
 .text-custom-gradient {
   background: var(--gradient-custom);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hover-text-custom-gradient:hover {
+  background: var(--gradient-custom);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-rubik);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }

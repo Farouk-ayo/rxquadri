@@ -1,6 +1,7 @@
 export const sections = [
+  { idRoute: "/#home", name: "Home" },
   { idRoute: "/#about", name: "About" },
-  { idRoute: "/#experience", name: "Experience" },
-  { idRoute: "/#works", name: "Works" },
+  { idRoute: "/#projects", name: "Projects" },
+  { idRoute: "/#achievements", name: "Achievements" },
   { idRoute: "/#contact", name: "Contact" },
 ];

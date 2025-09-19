@@ -31,9 +31,8 @@ const Button: React.FC<ButtonProps> = ({
   const variants = {
     filled:
       "bg-custom-gradient text-white shadow-lg hover:shadow-xl hover:opacity-90",
-    outline:
-      "border-2 border-custom-yellow text-custom-gradient backdrop-blur-sm",
-    link: "px-0 py-0 text-custom-gradient hover:text-custom-gradient relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-custom-yellow after:transition-all after:duration-300 hover:after:w-full",
+    outline: "border-custom-gradient text-custom-gradient backdrop-blur-sm",
+    link: "px-0 py-0 hover-text-custom-gradient relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-custom-yellow after:transition-all after:duration-300 hover:after:w-full",
   };
 
   if (asChild) {
