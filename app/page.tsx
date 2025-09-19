@@ -9,7 +9,7 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       <BackgroundPattern />
       <Navbar />
-      <SocialLinks />
+      {/* <SocialLinks /> */}
       <main>
         <Hero />
         <About />

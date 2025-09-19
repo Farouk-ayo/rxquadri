@@ -108,7 +108,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 onClick={toggleMenu}
               >
-                View Resume
+                Resume
               </Link>
             </Button>
           </nav>
