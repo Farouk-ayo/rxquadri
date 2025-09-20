@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 
 interface ButtonProps {
-  variant?: "filled" | "outline" | "link";
+  variant?: "filled" | "outline" | "link" | "base";
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  variant = "filled",
+  variant = "base",
   children,
   onClick,
   className = "",
@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   asChild = false,
 }) => {
   const baseClasses =
-    " inline-flex font-sora items-center justify-center font-medium rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none cursor-pointer";
+    " inline-flex font-sora items-center justify-center font-medium rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none cursor-pointer ";
 
   const sizeClasses = {
     sm: "px-6 py-2 text-sm",
@@ -29,6 +29,7 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   const variants = {
+    base: "",
     filled:
       "bg-custom-gradient text-white shadow-lg hover:shadow-xl hover:opacity-90",
     outline: "border-custom-gradient text-custom-gradient backdrop-blur-sm",

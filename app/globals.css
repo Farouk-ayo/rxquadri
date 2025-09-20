@@ -34,6 +34,25 @@
   background: transparent;
 }
 
+.hover-border-custom-gradient:hover {
+  position: relative;
+  z-index: 0;
+  background: transparent;
+}
+
+.hover-border-custom-gradient:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* border thickness */
+  border-radius: inherit;
+  background: var(--gradient-custom);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
 .border-custom-gradient::before {
   content: "";
   position: absolute;
