@@ -29,7 +29,7 @@ const Navbar = () => {
             className=" w-full h-full"
             layout="fill"
             objectFit="
-            cvoer"
+            cover"
             alt="logo"
           />
         </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
           RxQu@dri
         </h1>
       </Link>
-      <div className="hidden md:flex items-center gap-6  font-sora ">
+      <div className="hidden lg:flex items-center gap-6  font-sora ">
         <nav className="w-full flex flex-row items-center">
           <ul className="w-full flex flex-row justify-start items-center font-semibold text-lg gap-8">
             {sections.map((section, id) => (
@@ -67,25 +67,25 @@ const Navbar = () => {
         <button
           className={`hamburger ${
             isOpen ? "open" : ""
-          } relative z-30 w-8 h-6 flex flex-col justify-between items-center`}
+          } relative z-30 w-8 h-6 flex flex-col justify-between items-left`}
           onClick={toggleMenu}
         >
-          <span className="line block w-full h-1 dark:bg-secondary-color-3 bg-black transition-transform duration-300 ease-in-out origin-center"></span>
-          <span className="line block w-full h-1 dark:bg-secondary-color-3 bg-black transition-opacity duration-300 ease-in-out"></span>
-          <span className="line block w-full h-1 dark:bg-secondary-color-3 bg-black transition-transform duration-300 ease-in-out origin-center"></span>
+          <span className="line block w-full h-1 dark:bg-secondary-color-3 bg-custom-gradient transition-transform duration-300 ease-in-out origin-center"></span>
+          <span className="line block  w-full  h-1  dark:bg-secondary-color-3 bg-custom-gradient transition-opacity duration-300 ease-in-out"></span>
+          <span className="line block  w-full h-1  dark:bg-secondary-color-3 bg-custom-gradient transition-transform duration-300 ease-in-out origin-center"></span>
         </button>
       </div>
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: isOpen ? "0%" : "100%" }}
         transition={{ duration: 0.5 }}
-        className={`fixed inset-0 w-full h-lvh bg-black bg-opacity-50 lg:hidden`}
+        className={`fixed inset-0 w-full h-lvh bg-black/40 bg-opacity-100 lg:hidden`}
       >
         <motion.div
           initial={{ x: "100%" }}
           animate={{ x: isOpen ? "0%" : "100%" }}
           transition={{ duration: 0.5 }}
-          className="absolute top-0 right-0 h-full w-3/4 bg-white shadow-lg p-4"
+          className="absolute top-0 right-0 h-full w-3/4 shadow-lg p-4 bg-black"
         >
           <nav className="w-full flex flex-col items-center  z-40 mt-36 gap-4 justify-center">
             {sections.map((section, id) => (

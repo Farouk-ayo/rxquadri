@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} ${rubik.variable} ${sora.variable} font-sans antialiased `}
+        className={`${rubik.variable} ${sora.variable} font-sans antialiased `}
       >
         <main className=" ">{children}</main>
       </body>
