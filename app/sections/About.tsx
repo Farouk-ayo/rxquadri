@@ -16,6 +16,8 @@ const AboutSection = () => {
     { name: "Education", count: 0 },
     { name: "Skills", count: 0 },
   ];
+  const leftColumnData = experienceData.filter((_, index) => index % 2 === 0);
+  const rightColumnData = experienceData.filter((_, index) => index % 2 === 1);
 
   return (
     <section className="min-h-screen bg-black text-white px-4 sm:px-8 lg:px-16 py-8 sm:py-28 mt-28">
@@ -73,14 +75,14 @@ const AboutSection = () => {
         </div>
       </div>
       {/* TAB  */}
-      <div className="flex gap-4 mb-12 justify-center py-8 sm:py-28 mt-10">
+      <div className="flex gap-4 mb-12 justify-center py-8 mt-28 max-w-7xl mx-auto">
         {tabs.map((tab) => (
           <Button
             key={tab.name}
             size="lg"
             variant={activeTab === tab.name ? "filled" : "base"}
             onClick={() => setActiveTab(tab.name)}
-            className={`relative ${
+            className={`relative min-w-52 ${
               !(activeTab === tab.name)
                 ? "text-white/75 border-white/75 border-2 hover:border-transparent  hover-border-custom-gradient hover-text-custom-gradient"
                 : "border-none"
@@ -92,7 +94,7 @@ const AboutSection = () => {
       </div>
 
       {/* Content Area */}
-      <div className="relative">
+      <div className="relative max-w-7xl mx-auto">
         <AnimatePresence mode="wait">
           {activeTab === "Experience" && (
             <motion.div
@@ -104,17 +106,38 @@ const AboutSection = () => {
               className="relative"
             >
               {/* Timeline Dots */}
-              <TimelineDots count={experienceData.length} />
+              <TimelineDots count={experienceData.length + 1} />
 
               {/* Experience Cards */}
               <div className="space-y-6">
-                {experienceData.map((experience, index) => (
-                  <ExperienceCard
-                    key={experience.id}
-                    experience={experience}
-                    index={index}
-                  />
-                ))}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+                  <div className="space-y-8">
+                    {leftColumnData.map((experience, index) => (
+                      <div key={experience.id} className="flex w-full">
+                        <div className="w-full ">
+                          <ExperienceCard
+                            experience={experience}
+                            index={index * 2}
+                            isLeft={true}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="space-y-8 ">
+                    {rightColumnData.map((experience, index) => (
+                      <div key={experience.id} className="flex ">
+                        <div className="w-full ">
+                          <ExperienceCard
+                            experience={experience}
+                            index={index * 2 + 1}
+                            isLeft={false}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </motion.div>
           )}

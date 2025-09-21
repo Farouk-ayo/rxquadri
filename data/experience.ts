@@ -4,7 +4,6 @@ export const experienceData: ExperienceProps[] = [
     period: "Nov 2024- Present",
     title: "Co-Founder & CTO",
     company: "PharmaBin",
-    companyColor: "text-custom-gradient",
     location: "Hybrid, Nigeria",
     responsibilities: [
       "Spearheading the design and technology strategy for Nigeria's first digital pharmaceutical waste management and blister pack recycling platform.",
@@ -21,7 +20,6 @@ export const experienceData: ExperienceProps[] = [
     period: "Aug 2024- Jan 2025",
     title: "Web3 Designer",
     company: "BitQuid Labs",
-    companyColor: "text-orange-400",
     location: "Remote, United Arab Emirates",
     responsibilities: [
       "Designed future-facing bitcoin and blockchain product experiences, applying Web3 UI principles to enhance trust, transparency, and adoption.",
@@ -36,7 +34,6 @@ export const experienceData: ExperienceProps[] = [
     period: "Aug 2023- Aug 2024",
     title: "UI/UX Designer",
     company: "Apex Games",
-    companyColor: "text-yellow-400",
     location: "Remote, United States",
     responsibilities: [
       "Designed the official website for Apex Games (Live Website), ensuring a seamless brand experience for gaming communities.",
@@ -50,7 +47,6 @@ export const experienceData: ExperienceProps[] = [
     period: "Aug 2024- Sept 2024",
     title: "UI/UX Designer",
     company: "ClientTrip",
-    companyColor: "text-green-400",
     location: "Remote, United Arab Emirates",
     responsibilities: [
       "Redesigned a digital platform to help job seekers improve applications through structured reviews, increasing usability and engagement (Figma Link).",
@@ -64,7 +60,6 @@ export const experienceData: ExperienceProps[] = [
     period: "Jul 2024- Aug 2024",
     title: "UI/UX Designer",
     company: "PANS OAU Chapter",
-    companyColor: "text-blue-400",
     location: "Hybrid, Nigeria",
     responsibilities: [
       "Established design guidelines, standards, and best practices to help in building the Association's website.",
@@ -79,7 +74,6 @@ export const experienceData: ExperienceProps[] = [
     period: "Aug 2022- Jan 2024",
     title: "UI/UX Designer",
     company: "Solexe",
-    companyColor: "text-purple-400",
     location: "Remote, United States",
     responsibilities: [
       "Created wireframes, style guides, and user flow for the making of the website and mobile application.",

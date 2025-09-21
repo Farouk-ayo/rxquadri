@@ -2,21 +2,40 @@ import { motion } from "framer-motion";
 
 const TimelineDots = ({ count }: { count: number }) => {
   return (
-    <div className="absolute left-8 top-0 h-full flex flex-col justify-between py-8">
-      {[...Array(count)].map((_, i) => (
-        <div key={i} className="flex items-center">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: i * 0.1 }}
-            className="w-2 h-2 sm:w-3 sm:h-3 bg-orange-500 rounded-full flex-shrink-0 relative z-10"
-          />
-          {i < count - 1 && (
-            <div className="absolute top-3 w-0.5 h-[100px] sm:h-[120px] lg:h-[140px] bg-custom-gradient opacity-30 left-[3px] sm:left-[5px]" />
-          )}
+    <div className="absolute left-1/2 transform -translate-x-1/2 h-full z-10">
+      {/* Main timeline container */}
+      <div className="w-0.5 h-full relative">
+        {/* Dashed gradient line background */}
+        <div
+          className="absolute inset-0 opacity-50"
+          style={{
+            background: "var(--gradient-custom)",
+            maskImage:
+              "repeating-linear-gradient(to bottom, transparent 0px, transparent 3px, black 3px, black 8px)",
+            WebkitMaskImage:
+              "repeating-linear-gradient(to bottom, transparent 0px, transparent 3px, black 3px, black 8px)",
+          }}
+        />
+
+        {/* Timeline dots positioned along the line */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full flex flex-col justify-between ">
+          {[...Array(count)].map((_, i) => (
+            <motion.div
+              key={i}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                delay: i * 0.15 + 0.3,
+                duration: 0.4,
+                ease: "easeOut",
+              }}
+              className="w-1 h-1 sm:w-2 sm:h-2 bg-custom-gradient rounded-full flex-shrink-0"
+            />
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
+
 export default TimelineDots;
