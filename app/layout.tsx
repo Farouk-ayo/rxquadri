@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Rubik, Sora } from "next/font/google";
+import { Archivo, Rubik, Sora } from "next/font/google";
 import "./globals.css";
-
-export const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const rubik = Rubik({
   subsets: ["latin"],
@@ -20,6 +15,14 @@ export const sora = Sora({
   display: "swap",
   variable: "--font-sora",
 });
+
+export const archivo = Archivo({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-archivo",
+});
+
 export const metadata: Metadata = {
   title: "RxQuadri",
   description:
@@ -34,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${rubik.variable} ${sora.variable} font-sans antialiased `}
+        className={`${rubik.variable} ${sora.variable} ${archivo.variable} f font-sans antialiased `}
       >
         <main className=" ">{children}</main>
       </body>

@@ -84,7 +84,7 @@ const AboutSection = () => {
             onClick={() => setActiveTab(tab.name)}
             className={`relative min-w-52 ${
               !(activeTab === tab.name)
-                ? "text-white/75 border-white/75 border-2 hover:border-transparent  hover-border-custom-gradient hover-text-custom-gradient"
+                ? "text-white/75 border-white/30 bg-transparent border-2 hover:border-transparent  hover-border-custom-gradient hover-text-custom-gradient"
                 : "border-none"
             }`}
           >

@@ -18,6 +18,8 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-sora: var(--font-sora), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-archivo: var(--font-archivo), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-custom-yellow: #ffde59;
   --color-custom-red: #ff1616;
   --shadow-custom-gradient: 0 10px 25px rgba(255, 222, 89, 0.3),
