@@ -7,6 +7,8 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import TimelineDots from "@/components/ui/timeline-dots";
 import ExperienceCard from "../components/experienceCard";
+import { educationData } from "@/data/education";
+import { SkillCategory, skillData } from "../components/skillCard";
 
 const AboutSection = () => {
   const [activeTab, setActiveTab] = useState("Experience");
@@ -16,8 +18,20 @@ const AboutSection = () => {
     { name: "Education", count: 0 },
     { name: "Skills", count: 0 },
   ];
-  const leftColumnData = experienceData.filter((_, index) => index % 2 === 0);
-  const rightColumnData = experienceData.filter((_, index) => index % 2 === 1);
+  const leftColumnExperienceData = experienceData.filter(
+    (_, index) => index % 2 === 0
+  );
+  const rightColumnExperienceData = experienceData.filter(
+    (_, index) => index % 2 === 1
+  );
+  const leftColumnEducationData = educationData.filter(
+    (_, index) => index % 2 === 0
+  );
+  const rightColumnEducationData = educationData.filter(
+    (_, index) => index % 2 === 1
+  );
+  const leftColumnSkillData = skillData.filter((_, index) => index % 2 === 0);
+  const rightColumnSkillData = skillData.filter((_, index) => index % 2 === 1);
 
   return (
     <section className="min-h-screen bg-black text-white px-4 sm:px-8 lg:px-16 py-8 sm:py-28 mt-28">
@@ -112,7 +126,7 @@ const AboutSection = () => {
               <div className="space-y-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
                   <div className="space-y-8">
-                    {leftColumnData.map((experience, index) => (
+                    {leftColumnExperienceData.map((experience, index) => (
                       <div key={experience.id} className="flex w-full">
                         <div className="w-full ">
                           <ExperienceCard
@@ -125,7 +139,7 @@ const AboutSection = () => {
                     ))}
                   </div>
                   <div className="space-y-8 ">
-                    {rightColumnData.map((experience, index) => (
+                    {rightColumnExperienceData.map((experience, index) => (
                       <div key={experience.id} className="flex ">
                         <div className="w-full ">
                           <ExperienceCard
@@ -149,11 +163,40 @@ const AboutSection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="text-center py-20"
+              className="relative"
             >
-              <p className="text-gray-400 text-lg">
-                Education content coming soon...
-              </p>
+              <TimelineDots count={educationData.length + 1} />
+
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+                  <div className="space-y-8">
+                    {leftColumnEducationData.map((education, index) => (
+                      <div key={education.id} className="flex w-full">
+                        <div className="w-full">
+                          <ExperienceCard
+                            experience={education}
+                            index={index * 2}
+                            isLeft={true}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="space-y-8">
+                    {rightColumnEducationData.map((education, index) => (
+                      <div key={education.id} className="flex">
+                        <div className="w-full">
+                          <ExperienceCard
+                            experience={education}
+                            index={index * 2 + 1}
+                            isLeft={false}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </motion.div>
           )}
 
@@ -164,11 +207,40 @@ const AboutSection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="text-center py-20"
+              className="relative"
             >
-              <p className="text-gray-400 text-lg">
-                Skills content coming soon...
-              </p>
+              <TimelineDots count={skillData.length + 1} />
+
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+                  <div className="space-y-8">
+                    {leftColumnSkillData.map((category, index) => (
+                      <div key={category.id} className="flex w-full">
+                        <div className="w-full">
+                          <SkillCategory
+                            category={category}
+                            index={index * 2}
+                            isLeft={true}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="space-y-8">
+                    {rightColumnSkillData.map((category, index) => (
+                      <div key={category.id} className="flex">
+                        <div className="w-full">
+                          <SkillCategory
+                            category={category}
+                            index={index * 2 + 1}
+                            isLeft={false}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

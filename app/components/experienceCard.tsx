@@ -43,7 +43,7 @@ const ExperienceCard = ({ experience, index, isLeft }: ExperienceCardProps) => {
           {experience.responsibilities.map((responsibility, i) => (
             <div key={i} className="flex items-start gap-3">
               <div className="w-1 h-1 sm:w-2 sm:h-2 bg-custom-gradient rounded-full mt-2 flex-shrink-0" />
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-white/75 text-sm leading-relaxed">
                 {responsibility}
               </p>
             </div>
