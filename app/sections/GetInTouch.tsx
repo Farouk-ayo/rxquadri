@@ -14,7 +14,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <section className=" bg-black text-white px-4 sm:px-8 lg:px-16 py-8 md:py-10 ">
+    <section className=" bg-black text-white px-4 sm:px-8 lg:px-16 pt-8 md:pt-10 ">
       <div className="max-w-7xl mx-auto w-full">
         <SectionHeader number="5" title="Get In Touch" align="left" />
 
@@ -33,7 +33,7 @@ const GetInTouch = () => {
                 me an email to{" "}
                 <button
                   onClick={handleEmailClick}
-                  className="text-custom-gradient hover:text-orange-400 transition-colors duration-300 underline decoration-orange-400/50 hover:decoration-orange-400 underline-offset-4"
+                  className="text-custom-red underline-offset-4"
                 >
                   durosinmiquadril@gmail.com
                 </button>
