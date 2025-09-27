@@ -4,7 +4,10 @@ import Link from "next/link";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative z-10   max-w-5xl    px-2 sm:px-16 mx-auto text-center flex justify-center items-center gap-4 min-h-screen">
+    <section
+      className="relative z-10   max-w-5xl    px-2 sm:px-16 mx-auto text-center flex justify-center items-center gap-4 min-h-screen"
+      id="home"
+    >
       <div className="space-y-4 sm:space-y-6 text-center">
         <p className="text-custom-gradient text-2xl sm:text-4xl font-normal ">
           Hello, I am
@@ -16,7 +19,7 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 ">
           <p className="text-lg sm:text-xl lg:text-[32px] ">
-            Co-Founder & CTO @ PharmaBin 🚀
+            Founder & CEO @ PharmaBin 🚀
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,10 +9,36 @@ import { sections } from "@/data";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+      let current = "";
+      sections.forEach((section) => {
+        const element = document.querySelector(section.idRoute) as HTMLElement;
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            current = section.idRoute;
+          }
+        }
+      });
+      setActiveSection(current);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  console.log(activeSection);
 
   return (
     <section
@@ -45,7 +71,11 @@ const Navbar = () => {
               <Button
                 variant={"link"}
                 key={id}
-                className="hidden lg:inline-block"
+                className={`hidden lg:inline-block transition-all duration-300 ${
+                  activeSection === section.idRoute
+                    ? "text-custom-gradient shadow-md scale-105 "
+                    : ""
+                }`}
                 asChild
               >
                 <Link key={id} href={section.idRoute} className="">
@@ -89,7 +119,16 @@ const Navbar = () => {
         >
           <nav className="w-full flex flex-col items-center  z-40 mt-36 gap-4 justify-center">
             {sections.map((section, id) => (
-              <Button variant={"link"} key={id} asChild>
+              <Button
+                variant={"link"}
+                key={id}
+                className={`transition-all duration-300 ${
+                  activeSection === section.idRoute
+                    ? "text-custom-gradient shadow-md scale-105"
+                    : ""
+                }`}
+                asChild
+              >
                 <Link
                   key={id}
                   href={section.idRoute}

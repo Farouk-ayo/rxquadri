@@ -4,6 +4,7 @@
   --background: #000000;
   --foreground: #ffffff;
   --gradient-custom: linear-gradient(121.76deg, #ffde59 15.41%, #ff1616 81.48%);
+  scroll-behavior: smooth;
 }
 
 @theme inline {
@@ -74,6 +75,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  transition: all 3s;
 }
 
 .hover-text-custom-gradient:hover {
@@ -88,6 +90,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-flex;
+}
+
+#root {
+  scroll-behavior: smooth;
 }
 
 body {

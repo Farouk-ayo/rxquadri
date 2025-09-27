@@ -14,7 +14,10 @@ const GetInTouch = () => {
   };
 
   return (
-    <section className=" bg-black text-white px-4 sm:px-8 lg:px-16 pt-8 md:pt-10 ">
+    <section
+      className=" bg-black text-white px-4 sm:px-8 lg:px-16  pt-28 py-12 "
+      id="contact"
+    >
       <div className="max-w-7xl mx-auto w-full">
         <SectionHeader number="5" title="Get In Touch" align="left" />
 

@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
     filled:
       "bg-custom-gradient text-white shadow-lg hover:shadow-xl hover:opacity-90",
     outline: "border-custom-gradient text-custom-gradient backdrop-blur-sm",
-    link: "px-0 py-0 hover-text-custom-gradient relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-custom-yellow after:transition-all after:duration-300 hover:after:w-full",
+    link: "px-0 py-0 hover-text-custom-gradient relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-custom-yellow after:transition-all after:duration-300 ",
   };
 
   if (asChild) {

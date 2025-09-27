@@ -34,7 +34,10 @@ const AboutSection = () => {
   const rightColumnSkillData = skillData.filter((_, index) => index % 2 === 1);
 
   return (
-    <section className="min-h-screen bg-black text-white px-4 sm:px-8 lg:px-16 py-12">
+    <section
+      className="min-h-screen bg-black text-white px-4 sm:px-8 lg:px-16  pt-28 py-12"
+      id="about"
+    >
       <div className="max-w-7xl mx-auto">
         <SectionHeader number="1" title="About Me" align="left" />
 
