@@ -57,7 +57,7 @@ const Achievements = () => {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white px-4 sm:px-8 lg:px-16 py-8 md:py-10">
+    <section className=" bg-black text-white px-4 sm:px-8 lg:px-16 py-8 md:py-10">
       <div className="max-w-7xl mx-auto">
         <SectionHeader number="4" title="Achievements" align="left" />
 

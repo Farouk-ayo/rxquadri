@@ -15,9 +15,9 @@ const AchievementCard = ({ achievement, index }: AchievementCardProps) => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="group relative w-full"
+      className="group relative w-full h-full"
     >
-      <div className="backdrop-blur-sm rounded-xl border border-white/30 bg-transparent transition-all duration-300 w-full overflow-hidden hover:border-white/50 min-h-[400px] flex flex-col">
+      <div className="backdrop-blur-sm rounded-xl border border-white/30 bg-transparent transition-all duration-300 w-full overflow-hidden hover:border-white/50 min-h-[400px] flex flex-col h-full">
         {/* Achievement Image */}
         {achievement.image ? (
           <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden flex-shrink-0">
