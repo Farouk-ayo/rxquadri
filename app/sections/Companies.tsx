@@ -4,7 +4,7 @@ import CompaniesCard from "../components/companiesCard";
 
 const Companies = () => {
   return (
-    <section className="min-h-screen bg-black text-white px-4 sm:px-8 lg:px-16 py-8 ">
+    <section className=" bg-black text-white px-4 sm:px-8 lg:px-16 py-12 ">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           number="2"

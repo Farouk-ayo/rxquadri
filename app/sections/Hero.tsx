@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative z-10 top-24  max-w-5xl   py-8 sm:py-28 px-2 sm:px-16 mx-auto text-center flex justify-center items-center gap-4">
+    <section className="relative z-10   max-w-5xl    px-2 sm:px-16 mx-auto text-center flex justify-center items-center gap-4 min-h-screen">
       <div className="space-y-4 sm:space-y-6 text-center">
         <p className="text-custom-gradient text-2xl sm:text-4xl font-normal ">
           Hello, I am

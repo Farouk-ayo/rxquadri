@@ -1,0 +1,116 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { CalendarIcon } from "@/components/icons";
+import Button from "@/components/ui/button";
+import Tag from "@/components/ui/tag";
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+
+interface ProjectCardProps {
+  project: ProjectProps;
+  index: number;
+}
+
+const ProjectCard = ({ project, index }: ProjectCardProps) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      className="group relative w-full"
+    >
+      <div className="backdrop-blur-sm rounded-xl border border-white/30 bg-transparent transition-all duration-300 w-full overflow-hidden hover:border-white/50">
+        {/* Project Image */}
+        <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        </div>
+
+        {/* Project Content */}
+        <div className="p-6">
+          {/* Date Tag */}
+          <Tag className="mb-4">
+            <CalendarIcon />
+            <span>{project.date}</span>
+          </Tag>
+
+          <div className="flex items-center gap-2 mb-2 font-sora">
+            <span className="text-lg font-semibold text-custom-gradient">
+              {project.title}
+            </span>
+          </div>
+          {/* Project Description */}
+          <p className="text-white/75 text-sm leading-relaxed mb-6 font-sora">
+            {project.description}
+          </p>
+
+          {/* Action Buttons */}
+          <div className="flex gap-3 flex-wrap text-sm text-center mx-auto justify-center">
+            {project.websiteLink && (
+              <Link
+                className="flex items-center gap-1"
+                href={project.websiteLink}
+              >
+                <span className="text-custom-gradient">View Website</span>
+                <ChevronRight className="text-custom-red" />
+              </Link>
+            )}
+            {project.designLink && (
+              <Link
+                className="flex items-center gap-1"
+                href={project.designLink}
+              >
+                <span className="text-custom-gradient">View Design</span>
+                <ChevronRight className="text-custom-red" />
+              </Link>
+            )}
+            {project.githubLink && (
+              <Link
+                className="flex items-center gap-1"
+                href={project.githubLink}
+              >
+                <span className="text-custom-gradient">View Github</span>
+                <ChevronRight className="text-custom-red" />
+              </Link>
+            )}
+            {project.threadLink && (
+              <Link
+                className="flex items-center gap-1"
+                href={project.threadLink}
+              >
+                <span className="text-custom-gradient">Reply Thread</span>
+                <ChevronRight className="text-custom-red" />
+              </Link>
+            )}
+            {project.caseStudyLink && (
+              <Link
+                className="flex items-center gap-1"
+                href={project.caseStudyLink}
+              >
+                <span className="text-custom-gradient">View Case Study</span>
+                <ChevronRight className="text-custom-red" />
+              </Link>
+            )}
+            {project.prototypeLink && (
+              <Link
+                className="flex items-center gap-1"
+                href={project.prototypeLink}
+              >
+                <span className="text-custom-gradient">View Prototype</span>
+                <ChevronRight className="text-custom-red" />
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+export default ProjectCard;

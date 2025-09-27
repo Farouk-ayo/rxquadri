@@ -3,6 +3,9 @@ import Navbar from "./components/navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Companies from "./sections/Companies";
+import Projects from "./sections/Projects";
+import Achievements from "./sections/Achievements";
+import GetInTouch from "./sections/GetInTouch";
 
 export default function Home() {
   return (
@@ -13,6 +16,9 @@ export default function Home() {
         <Hero />
         <About />
         <Companies />
+        <Projects />
+        <Achievements />
+        <GetInTouch />
       </main>
     </div>
   );

@@ -30,3 +30,19 @@ interface Company {
   name: string;
   logo: React.ReactNode;
 }
+
+interface ProjectProps {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  category: "All Projects" | "Websites" | "Mobile Apps" | "Web3" | "NGOs";
+  image: string;
+  websiteLink?: string;
+  designLink?: string;
+  githubLink?: string;
+  threadLink?: string;
+  caseStudyLink?: string;
+  prototypeLink?: string;
+  tags?: string[];
+}

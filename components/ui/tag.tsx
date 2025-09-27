@@ -11,7 +11,7 @@ const sizeClasses = {
   lg: "px-10 py-4 text-lg",
 };
 
-const Tag = ({ children, className = "", size = "md" }: TagProps) => {
+const Tag = ({ children, className = "", size = "sm" }: TagProps) => {
   return (
     <div
       className={`bg-transparent backdrop-blur-sm border border-white/30 rounded-full font-normal text-white inline-flex items-center gap-2 ${className} font-sora ${sizeClasses[size]}`}

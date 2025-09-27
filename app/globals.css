@@ -83,6 +83,12 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
+.icon-gradient {
+  background: var(--gradient-custom);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-flex;
+}
 
 body {
   background: var(--background);
