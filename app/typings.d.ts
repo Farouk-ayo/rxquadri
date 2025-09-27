@@ -46,3 +46,16 @@ interface ProjectProps {
   prototypeLink?: string;
   tags?: string[];
 }
+
+interface AchievementProps {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  category:
+    | "All Achievements"
+    | "Hackathon"
+    | "Innovation Challenge"
+    | "Professional";
+  image?: string;
+}
