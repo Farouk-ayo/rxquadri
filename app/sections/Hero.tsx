@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Button from "@/components/ui/button";
 import Link from "next/link";
+import Typewriter from "typewriter-effect";
 
 const Hero: React.FC = () => {
   return (
@@ -18,9 +21,27 @@ const Hero: React.FC = () => {
         </h1>
 
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 ">
-          <p className="text-lg sm:text-xl lg:text-[32px] ">
-            Founder & CEO @ PharmaBin 🚀
-          </p>
+          <div className="text-lg sm:text-xl lg:text-[32px] min-h-[1.2em] flex items-center justify-center">
+            <Typewriter
+              options={{
+                strings: [
+                  "Founder & CEO @ PharmaBin 🚀",
+                  "Pharmacist 👦",
+                  "UI/UX Designer 🎨",
+                  "Top 10 African Youth Voices in Climate-Health Innovation 🎤",
+                  "PAGIA 2024 Awardee 🥇",
+                  "SDGs & Climate Action Advocate 🌍",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 75,
+                deleteSpeed: 30,
+                cursor: "|",
+                wrapperClassName: "typewriter-wrapper",
+                cursorClassName: "typewriter-cursor",
+              }}
+            />
+          </div>
         </div>
 
         <p className=" leading-relaxed  mx-auto  font-light text-sm sm:text-xl text-white/75 ">

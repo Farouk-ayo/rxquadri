@@ -2,6 +2,7 @@
 import React from "react";
 import SectionHeader from "../components/sectionHeader";
 import Image from "next/image";
+import { MobileSocialLinks } from "../components/socialIcons";
 
 const GetInTouch = () => {
   const handleEmailClick = () => {
@@ -23,13 +24,13 @@ const GetInTouch = () => {
 
         <div className="mt-16 w-full mx-auto">
           <div className="backdrop-blur-sm rounded-3xl border border-white/20 bg-transparent p-8 sm:p-12 lg:p-16">
-            <div className="text-center mb-12">
+            <div className="text-center ">
               <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium mb-8">
                 Thanks for stopping by{" "}
                 <span className="inline-block animate-bounce">👋</span>
               </h2>
 
-              <p className="text-white/75 text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto mb-8 font-light font-sora">
+              <p className="text-white/75 text-lg sm:text-xl leading-relaxed max-w-4xl mx-auto font-light font-sora">
                 Contact me if you are interested in having me on your team,
                 working on your project, seeking mentorship, or just want to say
                 hello. If you think we might be a good fit for one another, send
@@ -41,11 +42,12 @@ const GetInTouch = () => {
                   durosinmiquadril@gmail.com
                 </button>
               </p>
+              <MobileSocialLinks />
             </div>
           </div>
         </div>
         {/* Buy Me a Coffee Section */}
-        <div className="text-center flex items-center gap-1 justify-center py-15">
+        <div className="text-center flex items-center gap-2 justify-center py-15">
           <p className="text-white/75 text-lg">
             Would you like to support my journey?
           </p>
@@ -55,7 +57,7 @@ const GetInTouch = () => {
               alt="buy me coffee"
               width={200}
               objectFit="cover"
-              height={50}
+              height={30}
               onClick={handleBuyMeCoffeeClick}
               className="transition-transform duration-300 group-hover:scale-105"
             />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,47 +9,21 @@ import { sections } from "@/data";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100; // Offset for navbar height
-      let current = "";
-      sections.forEach((section) => {
-        const element = document.querySelector(section.idRoute) as HTMLElement;
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            current = section.idRoute;
-          }
-        }
-      });
-      setActiveSection(current);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  console.log(activeSection);
-
   return (
     <section
-      className="fixed top-0 h-24 flex flex-row items-center w-full shadow-sm justify-between px-2 sm:px-16 z-20 backdrop-blur-lg border-b border-white/20"
+      className="fixed top-0 h-20 sm:h-24 flex flex-row items-center w-full shadow-sm justify-between px-2 sm:px-16 z-20 backdrop-blur-lg border-b border-white/20"
       data-aos="fade-down"
     >
       <Link
         href="/"
-        className="flex justify-start gap-5 sm:justify-center items-center tracking-wider"
+        className="flex justify-start gap-1 sm:gap-5 sm:justify-center items-center tracking-wider"
       >
-        <div className="w-9 h-9 relative">
+        <div className="w-5 h-5 sm:w-9 sm:h-9 relative">
           <Image
             src={"/logo.png"}
             className=" w-full h-full"
@@ -60,7 +34,7 @@ const Navbar = () => {
           />
         </div>
 
-        <h1 className="text-3xl sm:text-3xl font-semibold lg:text-4xl  text-custom-gradient font-sora">
+        <h1 className="text-2xl sm:text-3xl font-semibold lg:text-4xl  text-custom-gradient font-sora">
           RxQu@dri
         </h1>
       </Link>
@@ -71,11 +45,7 @@ const Navbar = () => {
               <Button
                 variant={"link"}
                 key={id}
-                className={`hidden lg:inline-block transition-all duration-300 ${
-                  activeSection === section.idRoute
-                    ? "text-custom-gradient shadow-md scale-105 "
-                    : ""
-                }`}
+                className="hidden lg:inline-block"
                 asChild
               >
                 <Link key={id} href={section.idRoute} className="">
@@ -97,12 +67,12 @@ const Navbar = () => {
         <button
           className={`hamburger ${
             isOpen ? "open" : ""
-          } relative z-30 w-8 h-6 flex flex-col justify-between items-left`}
+          } relative z-30 w-6 h-4 sm:w-8 sm:h-6 flex flex-col justify-between items-left`}
           onClick={toggleMenu}
         >
-          <span className="line block w-full h-1 dark:bg-secondary-color-3 bg-custom-gradient transition-transform duration-300 ease-in-out origin-center"></span>
-          <span className="line block  w-full  h-1  dark:bg-secondary-color-3 bg-custom-gradient transition-opacity duration-300 ease-in-out"></span>
-          <span className="line block  w-full h-1  dark:bg-secondary-color-3 bg-custom-gradient transition-transform duration-300 ease-in-out origin-center"></span>
+          <span className="line block w-full h-0.5 sm:h-1 dark:bg-secondary-color-3 bg-custom-gradient transition-transform duration-300 ease-in-out origin-center"></span>
+          <span className="line block  w-full  h-0.5 sm:h-1  dark:bg-secondary-color-3 bg-custom-gradient transition-opacity duration-300 ease-in-out"></span>
+          <span className="line block  w-full h-0.5 sm:h-1  dark:bg-secondary-color-3 bg-custom-gradient transition-transform duration-300 ease-in-out origin-center"></span>
         </button>
       </div>
       <motion.div
@@ -119,16 +89,7 @@ const Navbar = () => {
         >
           <nav className="w-full flex flex-col items-center  z-40 mt-36 gap-4 justify-center">
             {sections.map((section, id) => (
-              <Button
-                variant={"link"}
-                key={id}
-                className={`transition-all duration-300 ${
-                  activeSection === section.idRoute
-                    ? "text-custom-gradient shadow-md scale-105"
-                    : ""
-                }`}
-                asChild
-              >
+              <Button variant={"link"} key={id} asChild>
                 <Link
                   key={id}
                   href={section.idRoute}

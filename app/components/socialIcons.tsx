@@ -1,46 +1,130 @@
+"use client";
+import React from "react";
 import {
-  Dribbble,
-  Github,
-  Linkedin,
-  MessageCircle,
-  Twitter,
-} from "lucide-react";
+  BehanceIcon,
+  DribbleIcon,
+  EmailIcon,
+  LinkedInIcon,
+  WhatsappIcon,
+  XIcon,
+} from "@/components/icons";
 import Link from "next/link";
+import Image from "next/image";
 
 export const socialLinks = [
-  { icon: <Linkedin size={18} />, href: "#linkedin", label: "LinkedIn" },
-  { icon: <Github size={18} />, href: "#github", label: "GitHub" },
-  { icon: <Dribbble size={18} />, href: "#dribbble", label: "Dribbble" },
-  { icon: <Twitter size={18} />, href: "#twitter", label: "Twitter" },
-  { icon: <MessageCircle size={18} />, href: "#whatsapp", label: "WhatsApp" },
+  {
+    icon: <LinkedInIcon />,
+    href: "https://linkedin.com/in/yourprofile",
+    label: "LinkedIn",
+  },
+  {
+    icon: <DribbleIcon />,
+    href: "https://dribbble.com/yourprofile",
+    label: "Dribbble",
+  },
+  {
+    icon: <BehanceIcon />,
+    href: "https://behance.net/yourprofile",
+    label: "Behance",
+  },
+  { icon: <XIcon />, href: "https://x.com/yourprofile", label: "Twitter" },
+  {
+    icon: <WhatsappIcon />,
+    href: "https://wa.me/yourphonenumber",
+    label: "WhatsApp",
+  },
+  {
+    icon: <EmailIcon />,
+    href: "mailto:durosinmiquadril@gmail.com",
+    label: "Email",
+  },
 ];
+
+export const MobileSocialLinks: React.FC = () => {
+  return (
+    <div className="lg:hidden flex justify-center mt-3">
+      <div className="flex items-center gap-6">
+        {/* Social Icons */}
+        <div className="flex gap-4">
+          {socialLinks.map((social, index) => (
+            <Link
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110 group border border-white/20 rounded-full backdrop-blur-sm"
+              aria-label={social.label}
+            >
+              <div className="group-hover:text-custom-gradient transition-colors duration-300">
+                {social.icon}
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const SocialLinks: React.FC = () => {
   return (
-    <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-40 hidden xl:block">
-      <div className="flex flex-col gap-4">
-        {socialLinks.map((social, index) => (
-          <Link
-            key={index}
-            href={social.href}
-            aria-label={social.label}
-            className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800/50 border border-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-orange-400 hover:border-orange-400 hover:bg-gray-800 transition-all duration-300 transform hover:scale-110 backdrop-blur-sm"
-          >
-            {social.icon}
-          </Link>
-        ))}
+    <>
+      {/* Left Side - Social Icons */}
+      <div className="fixed left-[1%] bottom-15 transform z-50 hidden lg:flex flex-col items-center gap-4">
+        {/* Social Icons */}
+        <div className="flex flex-col gap-1">
+          {socialLinks.map((social, index) => (
+            <Link
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110 group"
+              aria-label={social.label}
+            >
+              <div className="group-hover:text-custom-gradient transition-colors duration-300">
+                {social.icon}
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Vertical Line */}
+        <div className="relative">
+          <Image
+            src="/arrow.svg"
+            alt="arrow"
+            width={0}
+            height={0}
+            className="w-auto h-auto"
+          />
+        </div>
       </div>
 
-      {/* Vertical Email */}
-      <div className="mt-8 transform rotate-90 origin-left translate-y-20">
-        <a
-          href="mailto:quadri@pharmabin.com"
-          className="text-gray-400 hover:text-orange-400 transition-colors text-sm tracking-wider whitespace-nowrap"
+      {/* Right Side - Email Contact */}
+      <div className="fixed right-[1%] bottom-15 transform z-50 hidden lg:flex flex-col items-center gap-6">
+        {/* Email Text (Vertical) */}
+        <Link
+          href="mailto:durosinmiquadril@gmail.com"
+          className="text-white/70 hover:text-white transition-all duration-300 hover:scale-110 group"
+          style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
         >
-          quadri@pharmabin.com
-        </a>
+          <span className="text-sm font-light tracking-wider group-hover:text-custom-gradient transition-colors duration-300">
+            durosinmiquadril@gmail.com
+          </span>
+        </Link>
+        {/* Vertical Line */}
+        <div className="relative">
+          <Image
+            src="/arrow.svg"
+            alt="arrow"
+            width={0}
+            height={0}
+            className="w-auto h-auto"
+          />
+        </div>{" "}
       </div>
-    </div>
+    </>
   );
 };
 
