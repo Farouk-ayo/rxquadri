@@ -24,3 +24,9 @@ interface Skill {
   name: string;
   icon: React.ReactNode;
 }
+
+interface Company {
+  id: number;
+  name: string;
+  logo: React.ReactNode;
+}

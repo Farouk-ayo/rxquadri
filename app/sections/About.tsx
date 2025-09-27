@@ -166,7 +166,7 @@ const AboutSection = () => {
               className="relative"
             >
               <TimelineDots count={educationData.length + 1} />
-
+              {/* Education card  */}
               <div className="space-y-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
                   <div className="space-y-8">
@@ -210,7 +210,7 @@ const AboutSection = () => {
               className="relative"
             >
               <TimelineDots count={skillData.length + 1} />
-
+              {/* skills card  */}
               <div className="space-y-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
                   <div className="space-y-8">
