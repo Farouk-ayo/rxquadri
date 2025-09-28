@@ -89,24 +89,22 @@ const Navbar = () => {
         >
           <nav className="w-full flex flex-col items-center  z-40 mt-36 gap-4 justify-center">
             {sections.map((section, id) => (
-              <Button variant={"link"} key={id} asChild>
+              <Button variant={"link"} key={id} onClick={toggleMenu} asChild>
                 <Link
                   key={id}
                   href={section.idRoute}
                   className=" dark:text-primary-color"
-                  onClick={toggleMenu}
                 >
                   {section.name}
                 </Link>
               </Button>
             ))}
-            <Button variant={"outline"}>
+            <Button variant={"outline"} onClick={toggleMenu}>
               <Link
                 href="https://docs.google.com/document/d/1EktAf1QQtH6vMP7XUi9i0LLCasbY9IPy7YLwGasTA7k/edit?usp=sharing"
                 className=""
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={toggleMenu}
               >
                 Resume
               </Link>

@@ -8,7 +8,7 @@ const Companies = () => {
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           number="2"
-          title="Companies Worked For So Far"
+          title="Companies I've Worked For"
           align="right"
         />
       </div>

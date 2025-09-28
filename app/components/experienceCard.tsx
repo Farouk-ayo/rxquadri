@@ -19,7 +19,7 @@ const ExperienceCard = ({ experience, index, isLeft }: ExperienceCardProps) => {
       className={`relative w-full  ${isLeft ? "mr-auto" : "ml-auto"}`}
     >
       {" "}
-      <div className="backdrop-blur-sm rounded-xl p-6 border   border-white/30 bg-transparent transition-all duration-300 w-full">
+      <div className="backdrop-blur-sm rounded-xl p-4 md:p-6 border   border-white/30 bg-transparent transition-all duration-300 w-full">
         <Tag className="mb-4">
           <CalendarIcon />
           <span> {experience.period}</span>
@@ -39,7 +39,7 @@ const ExperienceCard = ({ experience, index, isLeft }: ExperienceCardProps) => {
           </div>
         </div>
 
-        <div className="space-y-3 mb-6">
+        <div className="space-y-3 ">
           {experience.responsibilities.map((responsibility, i) => (
             <div key={i} className="flex items-start gap-3">
               <div className="w-1 h-1 sm:w-2 sm:h-2 bg-custom-gradient rounded-full mt-2 flex-shrink-0" />

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const TimelineDots = ({ count }: { count: number }) => {
   return (
-    <div className="absolute left-1/2 transform -translate-x-1/2 h-full z-10">
+    <div className="absolute left-1/2 transform -translate-x-1/2 h-full z-10 hidden lg:inline-block">
       {/* Main timeline container */}
       <div className="w-0.5 h-full relative">
         {/* Dashed gradient line background */}

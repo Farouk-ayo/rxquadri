@@ -45,14 +45,14 @@ export const MobileSocialLinks: React.FC = () => {
     <div className="lg:hidden flex justify-center mt-3">
       <div className="flex items-center gap-6">
         {/* Social Icons */}
-        <div className="flex gap-4">
+        <div className="flex gap-1 md:gap-4">
           {socialLinks.map((social, index) => (
             <Link
               key={index}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110 group border border-white/20 rounded-full backdrop-blur-sm"
+              className=" h-8 w-8 md:w-12 md:h-12 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110 group md:border border-white/20 rounded-full backdrop-blur-sm"
               aria-label={social.label}
             >
               <div className="group-hover:text-custom-gradient transition-colors duration-300">

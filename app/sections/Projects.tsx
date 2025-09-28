@@ -61,15 +61,15 @@ const Projects = () => {
         <SectionHeader number="3" title="Projects" align="left" />
 
         {/* Filter Tabs */}
-        <div className="flex gap-2 sm:gap-4 justify-center mb-8  max-w-7xl mx-auto overflow-x-auto overflow-y-hidden">
-          <div className="flex gap-2 sm:gap-4 min-w-max">
+        <div className="flex justify-center mb-8 max-w-7xl mx-auto px-4">
+          <div className="flex gap-2 sm:gap-4 flex-wrap flex-1  max-w-full">
             {categories.map((category) => (
               <Button
                 key={category.name}
-                size="lg"
+                size="lgMb"
                 variant={activeFilter === category.name ? "filled" : "base"}
                 onClick={() => setActiveFilter(category.name)}
-                className={`relative min-w-52  ${
+                className={`relative min-w-36  md:min-w-52 flex-shrink-0 ${
                   !(activeFilter === category.name)
                     ? "text-white/75 border-white/30 bg-transparent border-2 hover:border-transparent hover-border-custom-gradient hover-text-custom-gradient"
                     : "border-none"

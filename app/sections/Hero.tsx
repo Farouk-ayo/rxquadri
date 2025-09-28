@@ -52,13 +52,22 @@ const Hero: React.FC = () => {
           Advocate For Climate Action And SDGs&quot;
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <Button variant="filled" size="lg" className=" cursor-pointer">
+        <div className="flex flex-col  sm:flex-row gap-4 justify-center items-center pt-4">
+          <Button
+            variant="filled"
+            size="lg"
+            className=" cursor-pointer min-w-56
+            "
+          >
             <Link href={"#"} className="">
               View Projects
             </Link>
           </Button>
-          <Button variant="outline" size="lg" className=" cursor-pointer">
+          <Button
+            variant="outline"
+            size="lg"
+            className=" cursor-pointer min-w-56"
+          >
             <Link href={"#"} className="">
               Get In Touch
             </Link>

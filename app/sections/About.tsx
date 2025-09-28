@@ -35,13 +35,13 @@ const AboutSection = () => {
 
   return (
     <section
-      className="min-h-screen bg-black text-white px-4 sm:px-8 lg:px-16  pt-28 py-12"
+      className=" bg-black text-white px-4 sm:px-8 lg:px-16  pt-28 py-12"
       id="about"
     >
       <div className="max-w-7xl mx-auto">
         <SectionHeader number="1" title="About Me" align="left" />
 
-        <div className="grid lg:grid-cols-[2fr_1fr] gap-5 lg:gap-5 items-center">
+        <div className="grid lg:grid-cols-[2fr_1fr] gap-14 lg:gap-5 items-center">
           <div className="space-y-6 order-2 lg:order-1 font-light text-white/75">
             <p className=" text-base sm:text-[20px] leading-relaxed">
               Hello! I&apos;m Quadri , a UI/UX Designer, an Affiliate
@@ -92,14 +92,14 @@ const AboutSection = () => {
         </div>
       </div>
       {/* TAB  */}
-      <div className="flex gap-4 mb-12 justify-center py-8 mt-28 max-w-7xl mx-auto">
+      <div className="flex gap-2 md:gap-4 md:mb-12 justify-center py-10 md:py-8 md:mt-28 max-w-7xl mx-auto">
         {tabs.map((tab) => (
           <Button
             key={tab.name}
-            size="lg"
+            size="lgMb"
             variant={activeTab === tab.name ? "filled" : "base"}
             onClick={() => setActiveTab(tab.name)}
-            className={`relative min-w-52 ${
+            className={`relative md:min-w-52 ${
               !(activeTab === tab.name)
                 ? "text-white/75 border-white/30 bg-transparent border-2 hover:border-transparent  hover-border-custom-gradient hover-text-custom-gradient"
                 : "border-none"

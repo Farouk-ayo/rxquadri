@@ -6,7 +6,7 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   disabled?: boolean;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "lgMb";
   asChild?: boolean;
 }
 
@@ -24,8 +24,9 @@ const Button: React.FC<ButtonProps> = ({
 
   const sizeClasses = {
     sm: "px-6 py-2 text-sm",
-    md: "px-8 py-3 text-base",
-    lg: "px-10 py-4 text-lg",
+    md: "px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-base",
+    lg: "px-8 py-3 text-base sm:px-10 sm:py-4 sm:text-lg",
+    lgMb: "px-6 py-2 text-sm sm:px-10 sm:py-4 sm:text-lg",
   };
 
   const variants = {

@@ -70,10 +70,10 @@ const CompaniesCard = () => {
             <div key={`${company.id}-${index}`} className="flex-shrink-0">
               <Tag
                 size="lg"
-                className="hover:border-white/50 transition-colors duration-300 cursor-pointer"
+                className="hover:border-white/50 transition-colors duration-300 cursor-pointer flex items-center"
               >
-                {company.logo}
-                <span>{company.name}</span>
+                <div> {company.logo}</div>
+                <div>{company.name}</div>
               </Tag>
             </div>
           ))}

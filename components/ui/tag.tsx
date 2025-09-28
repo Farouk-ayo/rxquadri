@@ -6,15 +6,15 @@ interface TagProps {
   size?: "sm" | "md" | "lg";
 }
 const sizeClasses = {
-  sm: "px-6 py-2 text-sm",
+  sm: "px-6 py-2 text-xs md:text-sm",
   md: "px-8 py-3 text-base",
-  lg: "px-10 py-4 text-lg",
+  lg: "px-6 py-2 text-xs md:px-10 md:py-4 text-lg",
 };
 
 const Tag = ({ children, className = "", size = "sm" }: TagProps) => {
   return (
     <div
-      className={`bg-transparent backdrop-blur-sm border border-white/30 rounded-full font-normal text-white inline-flex items-center gap-2 ${className} font-sora ${sizeClasses[size]}`}
+      className={`bg-transparent backdrop-blur-sm border border-white/30 rounded-full font-normal text-white inline-flex items-center gap-2 ${className} font-sora ${sizeClasses[size]}  `}
     >
       {children}
     </div>
