@@ -8,19 +8,30 @@ import Typewriter from "typewriter-effect";
 const Hero: React.FC = () => {
   return (
     <section
-      className="relative z-10   max-w-5xl    px-2 sm:px-16 mx-auto text-center flex justify-center items-center gap-4 min-h-screen"
+      className="relative z-10 max-w-5xl px-2 sm:px-16 mx-auto text-center flex justify-center items-center gap-4 min-h-screen"
       id="home"
     >
       <div className="space-y-4 sm:space-y-6 text-center">
-        <p className="text-custom-gradient text-2xl sm:text-4xl font-normal ">
+        <p
+          className="text-custom-gradient text-2xl sm:text-4xl font-normal"
+          data-aos="fade-up"
+        >
           Hello, I am
         </p>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[84px] font-bold leading-tight animate-slide-up">
+        <h1
+          className="text-4xl sm:text-5xl lg:text-6xl xl:text-[84px] font-bold leading-tight"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <span className="block">Durosinmi Quadri</span>
         </h1>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 ">
+        <div
+          className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div className="text-lg sm:text-xl lg:text-[32px] min-h-[1.2em] flex items-center justify-center">
             <Typewriter
               options={{
@@ -44,20 +55,27 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        <p className=" leading-relaxed  mx-auto  font-light text-sm sm:text-xl text-white/75 ">
+        <p
+          className="leading-relaxed mx-auto font-light text-sm sm:text-xl text-white/75"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           &quot;I &apos;m A UI/UX Designer Passionate About Creating Intuitive,
           Impactful Digital Experiences That Solve Real-World Problems. Beyond
-          Design, I Co-Founded{" "}
+          Design, I Founded{" "}
           <span className="text-custom-red font-normal">PharmaBin</span> And
           Advocate For Climate Action And SDGs&quot;
         </p>
 
-        <div className="flex flex-col  sm:flex-row gap-4 justify-center items-center pt-4">
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           <Button
             variant="filled"
             size="lg"
-            className=" cursor-pointer min-w-56
-            "
+            className="cursor-pointer min-w-56"
           >
             <Link href={"#"} className="">
               View Projects
@@ -66,7 +84,7 @@ const Hero: React.FC = () => {
           <Button
             variant="outline"
             size="lg"
-            className=" cursor-pointer min-w-56"
+            className="cursor-pointer min-w-56"
           >
             <Link href={"#"} className="">
               Get In Touch

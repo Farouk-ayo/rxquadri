@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { CalendarIcon } from "@/components/icons";
 import Tag from "@/components/ui/tag";
 import Image from "next/image";
@@ -9,13 +8,15 @@ interface AchievementCardProps {
   index: number;
 }
 
-const AchievementCard = ({ achievement, index }: AchievementCardProps) => {
+export const AchievementCard = ({
+  achievement,
+  index,
+}: AchievementCardProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1, duration: 0.5 }}
+    <div
       className="group relative w-full h-full"
+      data-aos="fade-up"
+      data-aos-delay={index * 50}
     >
       <div className="backdrop-blur-sm rounded-xl border border-white/30 bg-transparent transition-all duration-300 w-full overflow-hidden hover:border-white/50 min-h-[400px] flex flex-col h-full">
         {/* Achievement Image */}
@@ -57,7 +58,7 @@ const AchievementCard = ({ achievement, index }: AchievementCardProps) => {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

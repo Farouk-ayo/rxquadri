@@ -4,7 +4,6 @@ import SectionHeader from "../components/sectionHeader";
 import Button from "@/components/ui/button";
 import { experienceData } from "@/data/experience";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import TimelineDots from "@/components/ui/timeline-dots";
 import ExperienceCard from "../components/experienceCard";
 import { educationData } from "@/data/education";
@@ -35,22 +34,25 @@ const AboutSection = () => {
 
   return (
     <section
-      className=" bg-black text-white px-4 sm:px-8 lg:px-16  pt-28 py-12"
+      className="bg-black text-white px-4 sm:px-8 lg:px-16 pt-28 py-12"
       id="about"
     >
       <div className="max-w-7xl mx-auto">
         <SectionHeader number="1" title="About Me" align="left" />
 
         <div className="grid lg:grid-cols-[2fr_1fr] gap-14 lg:gap-5 items-center">
-          <div className="space-y-6 order-2 lg:order-1 font-light text-white/75">
-            <p className=" text-base sm:text-[20px] leading-relaxed">
+          <div
+            className="space-y-6 order-2 lg:order-1 font-light text-white/75"
+            data-aos="fade-right"
+          >
+            <p className="text-base sm:text-[20px] leading-relaxed">
               Hello! I&apos;m Quadri , a UI/UX Designer, an Affiliate
               Pharmacist, and Youth Advocate for the UN Sustainable Development
               Goals (SDGs). I am passionate about solving problems at the
               intersection of healthcare, technology, and sustainability.
             </p>
 
-            <p className=" text-base sm:text-[20px] leading-relaxed">
+            <p className="text-base sm:text-[20px] leading-relaxed">
               With experience in pharmaceutical innovation and digital product
               design, I specialize in creating user-friendly, impactful
               solutions for medtech, agritech, edutech, fintech, and Web3
@@ -60,8 +62,8 @@ const AboutSection = () => {
               technology and advocacy.
             </p>
 
-            <p className=" text-base sm:text-[20px] leading-relaxed">
-              As Co-founder of{" "}
+            <p className="text-base sm:text-[20px] leading-relaxed">
+              As Founder of{" "}
               <span className="text-custom-red font-normal">PharmaBin</span>, I
               lead initiatives addressing pharmaceutical waste management
               through digital solutions which also introduces the recycling of
@@ -70,10 +72,13 @@ const AboutSection = () => {
               healthtech, sustainability, and UI/UX design projects.
             </p>
           </div>
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2 relative px-10">
+          <div
+            className="flex justify-center lg:justify-end order-1 lg:order-2 relative px-10"
+            data-aos="fade-left"
+          >
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="absolute w-64 h-80 sm:w-72 sm:h-96 lg:w-[22rem] lg:h-[23rem] right-[5.5%] top-[10%]">
-                <div className="w-full h-full border-custom-gradient  rounded-[10px]"></div>
+                <div className="w-full h-full border-custom-gradient rounded-[10px]"></div>
               </div>
             </div>
 
@@ -92,7 +97,10 @@ const AboutSection = () => {
         </div>
       </div>
       {/* TAB  */}
-      <div className="flex gap-2 md:gap-4 md:mb-12 justify-center py-10 md:py-8 md:mt-28 max-w-7xl mx-auto">
+      <div
+        className="flex gap-2 md:gap-4 md:mb-12 justify-center py-10 md:py-8 md:mt-28 max-w-7xl mx-auto"
+        data-aos="fade-up"
+      >
         {tabs.map((tab) => (
           <Button
             key={tab.name}
@@ -101,7 +109,7 @@ const AboutSection = () => {
             onClick={() => setActiveTab(tab.name)}
             className={`relative md:min-w-52 ${
               !(activeTab === tab.name)
-                ? "text-white/75 border-white/30 bg-transparent border-2 hover:border-transparent  hover-border-custom-gradient hover-text-custom-gradient"
+                ? "text-white/75 border-white/30 bg-transparent border-2 hover:border-transparent hover-border-custom-gradient hover-text-custom-gradient"
                 : "border-none"
             }`}
           >
@@ -112,141 +120,118 @@ const AboutSection = () => {
 
       {/* Content Area */}
       <div className="relative max-w-7xl mx-auto">
-        <AnimatePresence mode="wait">
-          {activeTab === "Experience" && (
-            <motion.div
-              key="experience"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="relative"
-            >
-              {/* Timeline Dots */}
-              <TimelineDots count={experienceData.length + 1} />
+        {activeTab === "Experience" && (
+          <div className="relative">
+            {/* Timeline Dots */}
+            <TimelineDots count={experienceData.length + 1} />
 
-              {/* Experience Cards */}
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
-                  <div className="space-y-8">
-                    {leftColumnExperienceData.map((experience, index) => (
-                      <div key={experience.id} className="flex w-full">
-                        <div className="w-full ">
-                          <ExperienceCard
-                            experience={experience}
-                            index={index * 2}
-                            isLeft={true}
-                          />
-                        </div>
+            {/* Experience Cards */}
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+                <div className="space-y-8">
+                  {leftColumnExperienceData.map((experience, index) => (
+                    <div key={experience.id} className="flex w-full">
+                      <div className="w-full">
+                        <ExperienceCard
+                          experience={experience}
+                          index={index * 2}
+                          isLeft={true}
+                        />
                       </div>
-                    ))}
-                  </div>
-                  <div className="space-y-8 ">
-                    {rightColumnExperienceData.map((experience, index) => (
-                      <div key={experience.id} className="flex ">
-                        <div className="w-full ">
-                          <ExperienceCard
-                            experience={experience}
-                            index={index * 2 + 1}
-                            isLeft={false}
-                          />
-                        </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-8">
+                  {rightColumnExperienceData.map((experience, index) => (
+                    <div key={experience.id} className="flex">
+                      <div className="w-full">
+                        <ExperienceCard
+                          experience={experience}
+                          index={index * 2 + 1}
+                          isLeft={false}
+                        />
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </motion.div>
-          )}
+            </div>
+          </div>
+        )}
 
-          {activeTab === "Education" && (
-            <motion.div
-              key="education"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="relative"
-            >
-              <TimelineDots count={educationData.length + 1} />
-              {/* Education card  */}
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
-                  <div className="space-y-8">
-                    {leftColumnEducationData.map((education, index) => (
-                      <div key={education.id} className="flex w-full">
-                        <div className="w-full">
-                          <ExperienceCard
-                            experience={education}
-                            index={index * 2}
-                            isLeft={true}
-                          />
-                        </div>
+        {activeTab === "Education" && (
+          <div className="relative">
+            <TimelineDots count={educationData.length + 1} />
+            {/* Education card  */}
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+                <div className="space-y-8">
+                  {leftColumnEducationData.map((education, index) => (
+                    <div key={education.id} className="flex w-full">
+                      <div className="w-full">
+                        <ExperienceCard
+                          experience={education}
+                          index={index * 2}
+                          isLeft={true}
+                        />
                       </div>
-                    ))}
-                  </div>
-                  <div className="space-y-8">
-                    {rightColumnEducationData.map((education, index) => (
-                      <div key={education.id} className="flex">
-                        <div className="w-full">
-                          <ExperienceCard
-                            experience={education}
-                            index={index * 2 + 1}
-                            isLeft={false}
-                          />
-                        </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-8">
+                  {rightColumnEducationData.map((education, index) => (
+                    <div key={education.id} className="flex">
+                      <div className="w-full">
+                        <ExperienceCard
+                          experience={education}
+                          index={index * 2 + 1}
+                          isLeft={false}
+                        />
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </motion.div>
-          )}
+            </div>
+          </div>
+        )}
 
-          {activeTab === "Skills" && (
-            <motion.div
-              key="skills"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="relative"
-            >
-              <TimelineDots count={skillData.length + 1} />
-              {/* skills card  */}
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
-                  <div className="space-y-8">
-                    {leftColumnSkillData.map((category, index) => (
-                      <div key={category.id} className="flex w-full">
-                        <div className="w-full">
-                          <SkillCategory
-                            category={category}
-                            index={index * 2}
-                            isLeft={true}
-                          />
-                        </div>
+        {activeTab === "Skills" && (
+          <div className="relative">
+            <TimelineDots count={skillData.length + 1} />
+            {/* skills card  */}
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+                <div className="space-y-8">
+                  {leftColumnSkillData.map((category, index) => (
+                    <div key={category.id} className="flex w-full">
+                      <div className="w-full">
+                        <SkillCategory
+                          category={category}
+                          index={index * 2}
+                          isLeft={true}
+                        />
                       </div>
-                    ))}
-                  </div>
-                  <div className="space-y-8">
-                    {rightColumnSkillData.map((category, index) => (
-                      <div key={category.id} className="flex">
-                        <div className="w-full">
-                          <SkillCategory
-                            category={category}
-                            index={index * 2 + 1}
-                            isLeft={false}
-                          />
-                        </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-8">
+                  {rightColumnSkillData.map((category, index) => (
+                    <div key={category.id} className="flex">
+                      <div className="w-full">
+                        <SkillCategory
+                          category={category}
+                          index={index * 2 + 1}
+                          isLeft={false}
+                        />
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

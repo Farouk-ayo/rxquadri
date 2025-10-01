@@ -44,7 +44,6 @@ export const MobileSocialLinks: React.FC = () => {
   return (
     <div className="lg:hidden flex justify-center mt-3">
       <div className="flex items-center gap-6">
-        {/* Social Icons */}
         <div className="flex gap-1 md:gap-4">
           {socialLinks.map((social, index) => (
             <Link
@@ -52,7 +51,7 @@ export const MobileSocialLinks: React.FC = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className=" h-8 w-8 md:w-12 md:h-12 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110 group md:border border-white/20 rounded-full backdrop-blur-sm"
+              className="h-8 w-8 md:w-12 md:h-12 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:scale-110 group md:border border-white/20 rounded-full backdrop-blur-sm"
               aria-label={social.label}
             >
               <div className="group-hover:text-custom-gradient transition-colors duration-300">
@@ -66,12 +65,11 @@ export const MobileSocialLinks: React.FC = () => {
   );
 };
 
-const SocialLinks: React.FC = () => {
+export const SocialLinks: React.FC = () => {
   return (
     <>
       {/* Left Side - Social Icons */}
       <div className="fixed left-[1%] bottom-15 transform z-50 hidden lg:flex flex-col items-center gap-4">
-        {/* Social Icons */}
         <div className="flex flex-col gap-1">
           {socialLinks.map((social, index) => (
             <Link
@@ -89,7 +87,6 @@ const SocialLinks: React.FC = () => {
           ))}
         </div>
 
-        {/* Vertical Line */}
         <div className="relative">
           <Image
             src="/arrow.svg"
@@ -103,7 +100,6 @@ const SocialLinks: React.FC = () => {
 
       {/* Right Side - Email Contact */}
       <div className="fixed right-[1%] bottom-15 transform z-50 hidden lg:flex flex-col items-center gap-6">
-        {/* Email Text (Vertical) */}
         <Link
           href="mailto:durosinmiquadril@gmail.com"
           className="text-white/70 hover:text-white transition-all duration-300 hover:scale-110 group"
@@ -113,7 +109,6 @@ const SocialLinks: React.FC = () => {
             durosinmiquadril@gmail.com
           </span>
         </Link>
-        {/* Vertical Line */}
         <div className="relative">
           <Image
             src="/arrow.svg"
@@ -122,7 +117,7 @@ const SocialLinks: React.FC = () => {
             height={0}
             className="w-auto h-auto"
           />
-        </div>{" "}
+        </div>
       </div>
     </>
   );

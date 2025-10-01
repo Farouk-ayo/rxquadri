@@ -28,7 +28,6 @@ import {
 } from "@/components/icons";
 import Tag from "@/components/ui/tag";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 interface Skill {
   name: string;
@@ -120,16 +119,12 @@ interface SkillCategoryProps {
 }
 
 const SkillTag = ({ skill }: SkillTagProps) => (
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="cursor-pointer"
-  >
+  <div className="transition-transform duration-200 hover:scale-105 active:scale-95 cursor-pointer">
     <Tag>
       {skill.icon}
       <span>{skill.name}</span>
     </Tag>
-  </motion.div>
+  </div>
 );
 
 export const SkillCategory = ({
@@ -137,25 +132,20 @@ export const SkillCategory = ({
   index,
   isLeft,
 }: SkillCategoryProps) => (
-  <motion.div
-    initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ delay: index * 0.1 }}
-    className={`relative w-full  ${isLeft ? "mr-auto" : "ml-auto"}`}
+  <div
+    className={`relative w-full ${isLeft ? "mr-auto" : "ml-auto"}`}
+    data-aos={isLeft ? "fade-right" : "fade-left"}
+    data-aos-delay={index * 50}
   >
-    {" "}
-    <div className="backdrop-blur-sm rounded-xl p-6 border   border-white/30 bg-transparent transition-all duration-300 w-full">
-      {" "}
-      <span
-        className={`text-2xl font-semibold text-custom-gradient  m font-sora"`}
-      >
+    <div className="backdrop-blur-sm rounded-xl p-6 border border-white/30 bg-transparent transition-all duration-300 w-full">
+      <span className="text-2xl font-semibold text-custom-gradient m font-sora">
         {category.title}
       </span>
-      <motion.div className="flex flex-wrap gap-3 font-archivo mt-2">
+      <div className="flex flex-wrap gap-3 font-archivo mt-2">
         {category.skills.map((skill) => (
           <SkillTag key={skill.name} skill={skill} />
         ))}
-      </motion.div>
+      </div>
     </div>
-  </motion.div>
+  </div>
 );

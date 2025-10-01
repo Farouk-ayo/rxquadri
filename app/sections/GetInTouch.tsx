@@ -16,18 +16,17 @@ const GetInTouch = () => {
 
   return (
     <section
-      className=" bg-black text-white px-4 sm:px-8 lg:px-16  pt-28 py-12 "
+      className="bg-black text-white px-4 sm:px-8 lg:px-16  pt-28"
       id="contact"
     >
       <div className="max-w-7xl mx-auto w-full">
         <SectionHeader number="5" title="Get In Touch" align="left" />
 
-        <div className="mt-16 w-full mx-auto">
+        <div className="mt-16 w-full mx-auto" data-aos="fade-up">
           <div className="backdrop-blur-sm rounded-3xl border border-white/20 bg-transparent p-8 sm:p-12 lg:p-16">
-            <div className="text-center ">
-              <h2 className="text-2xl sm:text-3xl  font-medium mb-4">
-                Thanks for stopping by{" "}
-                <span className="inline-block animate-bounce">👋</span>
+            <div className="text-center">
+              <h2 className="text-2xl sm:text-3xl font-medium mb-4">
+                Thanks for stopping by <span className="inline-block">👋</span>
               </h2>
 
               <p className="text-white/75 text-base sm:text-xl leading-relaxed max-w-4xl mx-auto font-light font-sora">
@@ -47,17 +46,20 @@ const GetInTouch = () => {
           </div>
         </div>
         {/* Buy Me a Coffee Section */}
-        <div className="text-center flex flex-col md:flex-row items-center gap-2 justify-center py-15">
+        <div
+          className="text-center flex flex-col md:flex-row items-center gap-2 justify-center py-15"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <p className="text-white/75 text-lg">
             Would you like to support my journey?
           </p>
-          <div className="cursor-pointer">
+          <div className="cursor-pointer h-24 w-40 relative">
             <Image
               src="/buy-me-coffee.png"
               alt="buy me coffee"
-              width={200}
-              objectFit="cover"
-              height={30}
+              objectFit="contain"
+              fill
               onClick={handleBuyMeCoffeeClick}
               className="transition-transform duration-300 group-hover:scale-105"
             />
@@ -68,7 +70,7 @@ const GetInTouch = () => {
       <footer className="bg-black text-white border-t border-white/20 py-2 md:py-8 px-4 sm:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2  ">
+            <div className="flex items-center gap-2">
               <span className="text-lg">©</span>
               <span>2025 All rights reserved</span>
             </div>

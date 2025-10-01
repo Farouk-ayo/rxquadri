@@ -1,7 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { CalendarIcon } from "@/components/icons";
-import Button from "@/components/ui/button";
 import Tag from "@/components/ui/tag";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,13 +10,12 @@ interface ProjectCardProps {
   index: number;
 }
 
-const ProjectCard = ({ project, index }: ProjectCardProps) => {
+export const ProjectCard = ({ project, index }: ProjectCardProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1, duration: 0.5 }}
+    <div
       className="group relative w-full"
+      data-aos="fade-up"
+      data-aos-delay={index * 50}
     >
       <div className="backdrop-blur-sm rounded-xl border border-white/30 bg-transparent transition-all duration-300 w-full overflow-hidden hover:border-white/50">
         {/* Project Image */}
@@ -54,7 +51,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           <div className="flex gap-3 flex-wrap text-sm text-center mx-auto justify-center">
             {project.websiteLink && (
               <Link
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
                 href={project.websiteLink}
               >
                 <span className="text-custom-gradient">View Website</span>
@@ -63,7 +60,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             )}
             {project.designLink && (
               <Link
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
                 href={project.designLink}
               >
                 <span className="text-custom-gradient">View Design</span>
@@ -72,7 +69,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             )}
             {project.githubLink && (
               <Link
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
                 href={project.githubLink}
               >
                 <span className="text-custom-gradient">View Github</span>
@@ -81,7 +78,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             )}
             {project.threadLink && (
               <Link
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
                 href={project.threadLink}
               >
                 <span className="text-custom-gradient">Reply Thread</span>
@@ -90,7 +87,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             )}
             {project.caseStudyLink && (
               <Link
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
                 href={project.caseStudyLink}
               >
                 <span className="text-custom-gradient">View Case Study</span>
@@ -99,7 +96,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             )}
             {project.prototypeLink && (
               <Link
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
                 href={project.prototypeLink}
               >
                 <span className="text-custom-gradient">View Prototype</span>
@@ -109,7 +106,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

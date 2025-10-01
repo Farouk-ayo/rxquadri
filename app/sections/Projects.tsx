@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import SectionHeader from "../components/sectionHeader";
 import Button from "@/components/ui/button";
-import { AnimatePresence, motion } from "framer-motion";
 import { projectsData } from "@/data/projects";
 import ProjectCard from "../components/projectCard";
 
@@ -54,22 +53,25 @@ const Projects = () => {
 
   return (
     <section
-      className=" bg-black text-white px-4 sm:px-8 lg:px-16 pt-28 py-12"
+      className="bg-black text-white px-4 sm:px-8 lg:px-16 pt-28 py-12"
       id="projects"
     >
       <div className="max-w-7xl mx-auto">
         <SectionHeader number="3" title="Projects" align="left" />
 
         {/* Filter Tabs */}
-        <div className="flex justify-center mb-8 max-w-7xl mx-auto px-4">
-          <div className="flex gap-2 sm:gap-4 flex-wrap flex-1  max-w-full">
+        <div
+          className="flex justify-center mb-8 max-w-7xl mx-auto px-4"
+          data-aos="fade-up"
+        >
+          <div className="flex gap-2 sm:gap-4 flex-wrap flex-1 max-w-full">
             {categories.map((category) => (
               <Button
                 key={category.name}
                 size="lgMb"
                 variant={activeFilter === category.name ? "filled" : "base"}
                 onClick={() => setActiveFilter(category.name)}
-                className={`relative min-w-36  md:min-w-52 flex-shrink-0 ${
+                className={`relative min-w-36 md:min-w-52 flex-shrink-0 ${
                   !(activeFilter === category.name)
                     ? "text-white/75 border-white/30 bg-transparent border-2 hover:border-transparent hover-border-custom-gradient hover-text-custom-gradient"
                     : "border-none"
@@ -83,30 +85,19 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="relative max-w-7xl mx-auto mb-12">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeFilter}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                {currentProjects.map((project, index) => (
-                  <ProjectCard
-                    key={project.id}
-                    project={project}
-                    index={index}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {currentProjects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
         </div>
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-2 mt-12">
+          <div
+            className="flex justify-center items-center gap-2 mt-12"
+            data-aos="fade-up"
+          >
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <button
                 key={page}
