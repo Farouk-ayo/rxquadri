@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
             size="lg"
             className="cursor-pointer min-w-56"
           >
-            <Link href={"#"} className="">
+            <Link href={"#projects"} className="">
               View Projects
             </Link>
           </Button>
@@ -86,7 +86,12 @@ const Hero: React.FC = () => {
             size="lg"
             className="cursor-pointer min-w-56"
           >
-            <Link href={"#"} className="">
+            <Link
+              href={"https://www.linkedin.com/in/durosinmi-quadri-a5464921b"}
+              className=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Get In Touch
             </Link>
           </Button>

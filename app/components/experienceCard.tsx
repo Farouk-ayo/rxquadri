@@ -40,28 +40,13 @@ const ExperienceCard = ({ experience, index, isLeft }: ExperienceCardProps) => {
           {experience.responsibilities.map((responsibility, i) => (
             <div key={i} className="flex items-start gap-3">
               <div className="w-1 h-1 sm:w-2 sm:h-2 bg-custom-gradient rounded-full mt-2 flex-shrink-0" />
-              <p className="text-white/75 text-sm leading-relaxed">
-                {responsibility}
-              </p>
+              <p
+                className="text-white/75 text-sm leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: responsibility }}
+              />
             </div>
           ))}
         </div>
-
-        {/* Action Buttons - only show if links exist */}
-        {(experience.liveLink || experience.figmaLink) && (
-          <div className="flex gap-3 flex-wrap">
-            {experience.liveLink && (
-              <Button variant="outline" size="sm">
-                Live Website
-              </Button>
-            )}
-            {experience.figmaLink && (
-              <Button variant="link" size="sm">
-                Figma Link
-              </Button>
-            )}
-          </div>
-        )}
       </div>
     </div>
   );

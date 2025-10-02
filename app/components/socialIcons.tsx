@@ -14,23 +14,27 @@ import Image from "next/image";
 export const socialLinks = [
   {
     icon: <LinkedInIcon />,
-    href: "https://linkedin.com/in/yourprofile",
+    href: "https://www.linkedin.com/in/durosinmi-quadri-a5464921b",
     label: "LinkedIn",
   },
   {
     icon: <DribbleIcon />,
-    href: "https://dribbble.com/yourprofile",
+    href: "https://dribbble.com/RxQuadri",
     label: "Dribbble",
   },
   {
     icon: <BehanceIcon />,
-    href: "https://behance.net/yourprofile",
+    href: "http://www.behance.net/durosinquadril",
     label: "Behance",
   },
-  { icon: <XIcon />, href: "https://x.com/yourprofile", label: "Twitter" },
+  {
+    icon: <XIcon />,
+    href: "https://x.com/DUROSINMIQUADR1?t=XoCxjFoKQwFIVunetKl7AA&s=09",
+    label: "X",
+  },
   {
     icon: <WhatsappIcon />,
-    href: "https://wa.me/yourphonenumber",
+    href: "https://wa.me/2349039539042",
     label: "WhatsApp",
   },
   {

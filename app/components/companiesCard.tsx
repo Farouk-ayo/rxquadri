@@ -1,48 +1,169 @@
 "use client";
-import { PharmaBinIcon } from "@/components/icons";
 import Tag from "@/components/ui/tag";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const companiesData: Company[] = [
   {
     id: 1,
     name: "PharmaBin",
-    logo: <PharmaBinIcon />,
+    logo: (
+      <Image
+        src="/companies/pharmabin.svg"
+        alt="PharmaBin"
+        width={24}
+        height={24}
+        className="object-contain"
+      />
+    ),
   },
   {
     id: 2,
-    name: "PharmaBin",
-    logo: <PharmaBinIcon />,
+    name: "Apex Games",
+    logo: (
+      <Image
+        src="/companies/apex.svg"
+        alt="Apex Games"
+        width={24}
+        height={24}
+        className="object-contain"
+      />
+    ),
   },
   {
     id: 3,
-    name: "PharmaBin",
-    logo: <PharmaBinIcon />,
+    name: "BitQuid Labs",
+    logo: (
+      <Image
+        src="/companies/bitquid.svg"
+        alt="BitQuid Labs"
+        width={24}
+        height={24}
+        className="object-contain"
+      />
+    ),
   },
+
   {
     id: 4,
-    name: "PharmaBin",
-    logo: <PharmaBinIcon />,
+    name: "",
+    logo: (
+      <Image
+        src="/companies/jimoh.svg"
+        alt="Jimoh"
+        width={70}
+        height={24}
+        className="object-contain"
+      />
+    ),
   },
   {
     id: 5,
-    name: "PharmaBin",
-    logo: <PharmaBinIcon />,
+    name: "",
+    logo: (
+      <Image
+        src="/companies/drip.svg"
+        alt="Drip"
+        width={70}
+        height={24}
+        className="object-contain"
+      />
+    ),
   },
+
   {
     id: 6,
-    name: "PharmaBin",
-    logo: <PharmaBinIcon />,
+    name: "ZdsLogic Technologies",
+    logo: (
+      <Image
+        src="/companies/zds.svg"
+        alt="ZdsLogic"
+        width={24}
+        height={24}
+        className="object-contain"
+      />
+    ),
   },
   {
     id: 7,
-    name: "PharmaBin",
-    logo: <PharmaBinIcon />,
+    name: "Al-Burhan Media",
+    logo: (
+      <Image
+        src="/companies/burhan.svg"
+        alt="Burhan"
+        width={24}
+        height={24}
+        className="object-contain"
+      />
+    ),
   },
+
   {
     id: 8,
-    name: "PharmaBin",
-    logo: <PharmaBinIcon />,
+    name: "PANS OAU",
+    logo: (
+      <Image
+        src="/companies/pans.svg"
+        alt="PANS OAU"
+        width={24}
+        height={24}
+        className="object-contain"
+      />
+    ),
+  },
+
+  {
+    id: 9,
+    name: "",
+    logo: (
+      <Image
+        src="/companies/upwork.svg"
+        alt="Upwork"
+        width={70}
+        height={24}
+        className="object-contain"
+      />
+    ),
+  },
+  {
+    id: 10,
+    name: "MSSN OAU",
+    logo: (
+      <Image
+        src="/companies/mssn.svg"
+        alt="Mssn"
+        width={24}
+        height={24}
+        className="object-contain"
+      />
+    ),
+  },
+
+  {
+    id: 11,
+    name: "ClientTrip",
+    logo: (
+      <Image
+        src="/companies/clienttrip.svg"
+        alt="ClientTrip"
+        width={24}
+        height={24}
+        className="object-contain"
+      />
+    ),
+  },
+  {
+    id: 12,
+    name: "",
+    logo: (
+      <Image
+        src="/companies/solexe.svg"
+        alt="Solexe"
+        width={70}
+        height={24}
+        className="object-contain"
+      />
+    ),
   },
 ];
 
@@ -69,8 +190,8 @@ const CompaniesCard = () => {
           {infiniteCompaniesData.map((company, index) => (
             <div key={`${company.id}-${index}`} className="flex-shrink-0">
               <Tag
-                size="lg"
-                className="hover:border-white/50 transition-colors duration-300 cursor-pointer flex items-center"
+                size="xl"
+                className="hover:border-white/50 transition-colors duration-300 cursor-pointer flex items-center h-20"
               >
                 <div> {company.logo}</div>
                 <div>{company.name}</div>
@@ -97,8 +218,8 @@ const CompaniesCard = () => {
               className="flex-shrink-0"
             >
               <Tag
-                size="lg"
-                className="hover:border-white/50 transition-colors duration-300 cursor-pointer"
+                size="xl"
+                className="hover:border-white/50 transition-colors duration-300 cursor-pointer h-20"
               >
                 {company.logo}
                 <span>{company.name}</span>
@@ -122,8 +243,8 @@ const CompaniesCard = () => {
           {infiniteCompaniesData.map((company, index) => (
             <div key={`slow-${company.id}-${index}`} className="flex-shrink-0">
               <Tag
-                size="lg"
-                className="hover:border-white/50 transition-colors duration-300 cursor-pointer"
+                size="xl"
+                className="hover:border-white/50 transition-colors duration-300 cursor-pointer h-20"
               >
                 {company.logo}
                 <span>{company.name}</span>

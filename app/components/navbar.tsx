@@ -55,7 +55,11 @@ const Navbar = () => {
             ))}
             <li className="hidden lg:inline-block">
               <Button variant={"outline"} size="lg">
-                <Link href="#" target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://docs.google.com/document/d/1Z-aqLCN-KvgNMGIzbvAffMW-xkILXndU1ik47ulL1VQ/edit?tab=t.0 "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Resume
                 </Link>
               </Button>
@@ -101,7 +105,7 @@ const Navbar = () => {
             ))}
             <Button variant={"outline"} onClick={toggleMenu}>
               <Link
-                href="https://docs.google.com/document/d/1EktAf1QQtH6vMP7XUi9i0LLCasbY9IPy7YLwGasTA7k/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1Z-aqLCN-KvgNMGIzbvAffMW-xkILXndU1ik47ulL1VQ/edit?tab=t.0 "
                 className=""
                 target="_blank"
                 rel="noopener noreferrer"

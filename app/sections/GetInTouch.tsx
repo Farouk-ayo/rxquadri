@@ -10,8 +10,7 @@ const GetInTouch = () => {
   };
 
   const handleBuyMeCoffeeClick = () => {
-    // Replace with your actual Buy Me a Coffee link
-    window.open("https://buymeacoffee.com/quadri", "_blank");
+    window.open("https://buymeacoffee.com/rxquadri?new=1", "_blank");
   };
 
   return (
@@ -79,8 +78,13 @@ const GetInTouch = () => {
             <div className="text-white font text-sm md:text-base text-center md:text-right">
               <span>Designed by </span>
               <button
-                onClick={() => window.open("mailto:rxqu@dri", "_blank")}
-                className="text-custom-yellow transition-colors duration-300"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/durosinmi-quadri-a5464921b",
+                    "_blank"
+                  )
+                }
+                className="text-custom-yellow transition-colors duration-300 cursor-pointer"
               >
                 RxQu@dri
               </button>
@@ -89,7 +93,7 @@ const GetInTouch = () => {
                 onClick={() =>
                   window.open("https://devfarouk.vercel.app", "_blank")
                 }
-                className="text-custom-red transition-colors duration-300"
+                className="text-custom-red transition-colors duration-300 cursor-pointer"
               >
                 DevFarouk
               </button>
