@@ -85,7 +85,7 @@ const AboutSection = () => {
             <div className="relative w-64 h-80 sm:w-72 sm:h-96 lg:w-80 lg:h-96 z-10">
               <div className="w-full h-full rounded-[10px] overflow-hidden">
                 <Image
-                  src="/profile-image.png"
+                  src="/profile-image.webp"
                   alt="Quadri - UI/UX Designer"
                   fill
                   className="object-cover object-center rounded-[10px]"

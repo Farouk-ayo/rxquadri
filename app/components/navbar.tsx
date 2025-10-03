@@ -25,7 +25,7 @@ const Navbar = () => {
       >
         <div className="w-5 h-5 sm:w-9 sm:h-9 relative">
           <Image
-            src={"/logo.png"}
+            src={"/logo.webp"}
             className=" w-full h-full"
             layout="fill"
             objectFit="

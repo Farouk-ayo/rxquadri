@@ -55,7 +55,7 @@ const GetInTouch = () => {
           </p>
           <div className="cursor-pointer h-24 w-40 relative">
             <Image
-              src="/buy-me-coffee.png"
+              src="/buy-me-coffee.webp"
               alt="buy me coffee"
               objectFit="contain"
               fill

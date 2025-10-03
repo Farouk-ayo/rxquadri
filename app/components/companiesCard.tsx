@@ -9,7 +9,7 @@ const companiesData: Company[] = [
     name: "PharmaBin",
     logo: (
       <Image
-        src="/companies/pharmabin.png"
+        src="/companies/pharmabin.webp"
         alt="PharmaBin"
         width={32}
         height={32}
@@ -22,7 +22,7 @@ const companiesData: Company[] = [
     name: "Apex Games",
     logo: (
       <Image
-        src="/companies/apex.png"
+        src="/companies/apex.webp"
         alt="Apex Games"
         width={32}
         height={32}
@@ -35,7 +35,7 @@ const companiesData: Company[] = [
     name: "BitQuid Labs",
     logo: (
       <Image
-        src="/companies/bitquid.png"
+        src="/companies/bitquid.webp"
         alt="BitQuid Labs"
         width={32}
         height={32}
@@ -49,7 +49,7 @@ const companiesData: Company[] = [
     name: "",
     logo: (
       <Image
-        src="/companies/jimoh.png"
+        src="/companies/jimoh.webp"
         alt="Jimoh"
         width={90}
         height={32}
@@ -62,7 +62,7 @@ const companiesData: Company[] = [
     name: "",
     logo: (
       <Image
-        src="/companies/drip.png"
+        src="/companies/drip.webp"
         alt="Drip"
         width={90}
         height={32}
@@ -76,7 +76,7 @@ const companiesData: Company[] = [
     name: "ZdsLogic Technologies",
     logo: (
       <Image
-        src="/companies/zds.png"
+        src="/companies/zds.webp"
         alt="ZdsLogic"
         width={32}
         height={32}
@@ -89,7 +89,7 @@ const companiesData: Company[] = [
     name: "Al-Burhan Media",
     logo: (
       <Image
-        src="/companies/burhan.png"
+        src="/companies/burhan.webp"
         alt="Burhan"
         width={32}
         height={32}
@@ -103,7 +103,7 @@ const companiesData: Company[] = [
     name: "PANS OAU",
     logo: (
       <Image
-        src="/companies/pans.png"
+        src="/companies/pans.webp"
         alt="PANS OAU"
         width={32}
         height={32}
@@ -117,7 +117,7 @@ const companiesData: Company[] = [
     name: "",
     logo: (
       <Image
-        src="/companies/upwork.png"
+        src="/companies/upwork.webp"
         alt="Upwork"
         width={90}
         height={32}
@@ -130,7 +130,7 @@ const companiesData: Company[] = [
     name: "MSSN OAU",
     logo: (
       <Image
-        src="/companies/mssn.png"
+        src="/companies/mssn.webp"
         alt="Mssn"
         width={32}
         height={32}
@@ -144,7 +144,7 @@ const companiesData: Company[] = [
     name: "",
     logo: (
       <Image
-        src="/companies/clienttrip.png"
+        src="/companies/clienttrip.webp"
         alt="ClientTrip"
         width={90}
         height={32}
@@ -157,7 +157,7 @@ const companiesData: Company[] = [
     name: "",
     logo: (
       <Image
-        src="/companies/solexe.png"
+        src="/companies/solexe.webp"
         alt="Solexe"
         width={90}
         height={32}

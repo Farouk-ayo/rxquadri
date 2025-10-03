@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Rubik, Sora } from "next/font/google";
 import "./globals.css";
+import SplashScreenManager from "./components/splashScreenManager";
 
 export const rubik = Rubik({
   subsets: ["latin"],
@@ -90,7 +91,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://rxquadri.vercel.app/rxquadri-og.png",
+        url: "https://rxquadri.vercel.app/rxquadri-og.webp",
         alt: "RxQuadri | Product Designer & Healthcare Innovator Portfolio",
         width: 1200,
         height: 630,
@@ -102,7 +103,7 @@ export const metadata: Metadata = {
     title: "RxQuadri | Product Designer & Healthcare Innovator",
     description:
       "Product Designer specializing in healthcare solutions, Web3 platforms, and sustainable innovation. Co-founder of PharmaBin. Discover my design work and case studies.",
-    images: "https://rxquadri.vercel.app/rxquadri-og.png",
+    images: "https://rxquadri.vercel.app/rxquadri-og.webp",
     creator: "@DUROSINMIQUADR1",
   },
   authors: [
@@ -129,7 +130,10 @@ export default function RootLayout({
       <body
         className={`${rubik.variable} ${sora.variable} ${archivo.variable} font-sans antialiased `}
       >
-        <main className=" ">{children}</main>
+        {" "}
+        <SplashScreenManager>
+          <main className=" ">{children}</main>
+        </SplashScreenManager>
       </body>
     </html>
   );

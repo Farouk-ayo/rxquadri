@@ -6,7 +6,7 @@ export const projectsData: ProjectProps[] = [
       "A digital health platform designed to provide specialized care for patients with musculoskeletal conditions. Features appointment booking and patient portal.",
     date: "Aug 2025",
     category: "Websites",
-    image: "/projects/align-medic.png",
+    image: "/projects/align-medic.webp",
     designLink:
       "https://www.figma.com/design/kMQ1iKAzRg5IDVJ11NIW7H/Align-Medic?node-id=0-1&t=UKjcq9RJCYZhHJQJ-1",
   },
@@ -17,7 +17,7 @@ export const projectsData: ProjectProps[] = [
       "A comprehensive mental health and wellness platform for university students, providing resources, community support, and guided meditation tools.",
     date: "Apr 2025",
     category: "Mobile Apps",
-    image: "/projects/mindvolta.png",
+    image: "/projects/mindvolta.webp",
     designLink:
       "https://www.figma.com/design/5F0UBTUt4mD9T7R39kVEY2/Mindvolta-Club?node-id=4-5081&t=vfBdfYmj3xQ6hbcL-1",
   },
@@ -28,7 +28,7 @@ export const projectsData: ProjectProps[] = [
       "A blockchain-based verification platform that enables secure and transparent credential verification for educational institutions and employers.",
     date: "Dec 2024",
     category: "Mobile Apps",
-    image: "/projects/veridex.png",
+    image: "/projects/veridex.webp",
     designLink:
       "https://www.figma.com/design/mAlhutHyzJiK66rPRMRmzA/Veridex?node-id=21-2901&t=K6e8tYW4ZGlXcSz9-1",
   },
@@ -39,7 +39,7 @@ export const projectsData: ProjectProps[] = [
       "An AI-driven medication tracking app that helps users manage prescriptions, set reminders, and access pharmaceutical information safely.",
     date: "Dec 2024",
     category: "Websites",
-    image: "/projects/pharmabin.png",
+    image: "/projects/pharmabin.webp",
     websiteLink: "https://www.pharmabin.org/",
   },
   {
@@ -49,7 +49,7 @@ export const projectsData: ProjectProps[] = [
       "ZNS Connect is for simplifying the Web3 by getting domain names for those interested. Decentralized ID platform powered by decentralized addresses.",
     date: "Oct 2024",
     category: "Web3",
-    image: "/projects/zns.png",
+    image: "/projects/zns.webp",
     threadLink:
       "https://x.com/DUROSINMIQUADR1/status/1850272920163029496?t=EXciICZl_2ZGrFvoww79fw&s=19",
   },
@@ -60,7 +60,7 @@ export const projectsData: ProjectProps[] = [
       "A collaborative social gaming platform for fun and inclusive Web3 experience. It creates a fun, engaging, and human-centric environment where creativity and community thrive.",
     date: "Sep 2024",
     category: "Web3",
-    image: "/projects/cheddar.png",
+    image: "/projects/cheddar.webp",
     caseStudyLink:
       "https://dribbble.com/shots/24959046-Cheddar-Website-Redesign-Desktop-Mobile-Version",
   },
@@ -71,7 +71,7 @@ export const projectsData: ProjectProps[] = [
       "A food delivery and restaurant discovery app with personalized recommendations, real-time tracking, and seamless ordering experience.",
     date: "Nov 2024",
     category: "Mobile Apps",
-    image: "/projects/foodie.png",
+    image: "/projects/foodie.webp",
     designLink:
       "https://www.figma.com/design/TSQMM7fVXHZ4Aez1YstdTy/FOODIE?node-id=19-46768&t=hUojC3p6GCppVlQu-1",
   },
@@ -82,7 +82,7 @@ export const projectsData: ProjectProps[] = [
       "A fintech solution enabling students to conveniently make payment through a secure platform. Payments made easy for Polytechnic and Vocational students.",
     date: "Sep 2024",
     category: "Websites",
-    image: "/projects/scupay.png",
+    image: "/projects/scupay.webp",
     designLink:
       "https://www.figma.com/design/RCSH2aqk3WzuKbVd3NVT7M/SCUPAY-DESIGN?node-id=0-1&t=UtqLwNrA1ppIHJAp-1",
   },
@@ -93,7 +93,7 @@ export const projectsData: ProjectProps[] = [
       "An AI-powered CV review and optimization platform that helps job seekers improve their resumes through expert feedback and suggestions.",
     date: "Aug 2024",
     category: "Websites",
-    image: "/projects/ratecv.png",
+    image: "/projects/ratecv.webp",
     designLink:
       "https://www.figma.com/design/E4RPc1KGepe8bsSya94xEa/RateCV?node-id=24-455&p=f&t=ZLfy2owBcRh8kUTo-0",
   },
@@ -104,7 +104,7 @@ export const projectsData: ProjectProps[] = [
       "The website is to help Muslim Students on OAU Campus, Ile-Ife to navigate some affairs related to them. Read articles, see solat time, know activities and others.",
     date: "Aug 2024",
     category: "NGOs",
-    image: "/projects/mssnoau.png",
+    image: "/projects/mssnoau.webp",
     designLink:
       "https://www.figma.com/design/Xnp3UT8BhcJkuU1WaOpukM/MSSNOAU?node-id=708-7&t=hOyXTiuemN8zA17r-1",
   },
@@ -115,7 +115,7 @@ export const projectsData: ProjectProps[] = [
       "A comprehensive HR management system for tracking employee records, attendance, payroll, and performance reviews in one secure platform.",
     date: "Dec 2024",
     category: "Mobile Apps",
-    image: "/projects/staff-vault.png",
+    image: "/projects/staff-vault.webp",
     designLink:
       "https://www.figma.com/design/TmDaYSGAHfgkMdSUdThjal/StaffVault-Project?node-id=49-1925&t=3NIdS3HlvZ3DEDR0-1",
   },
@@ -126,7 +126,7 @@ export const projectsData: ProjectProps[] = [
       "The Jimoh Habibullah Initiative is a NGO dedicated to fostering empathy, empowerment, and community growth. There is one-on-one mentoring and workshops",
     date: "Aug 2024",
     category: "NGOs",
-    image: "/projects/jimoh.png",
+    image: "/projects/jimoh.webp",
     designLink:
       "https://www.figma.com/design/2jK82toVOdXXbJnWRAw3VB/JHI-WEBSITE?node-id=231-1425&t=MYXZA4aS6nDfPOex-1",
   },
@@ -137,7 +137,7 @@ export const projectsData: ProjectProps[] = [
       "DOTOK website is a web3 landing page which is a decentralized oracle network for bitcoin ecosystem - solves problem in the web3 space.",
     date: "Jul 2024",
     category: "Web3",
-    image: "/projects/dotok.png",
+    image: "/projects/dotok.webp",
     designLink: "https://dribbble.com/shots/24628894-DOTOK-Web3-Landing-Page",
   },
   {
@@ -147,7 +147,7 @@ export const projectsData: ProjectProps[] = [
       "Apex Games is a Web3 gaming platform that allows users to play and earn crypto coin called APEX. It is a revolutionary development studio.",
     date: "Jun 2024",
     category: "Web3",
-    image: "/projects/apex.png",
+    image: "/projects/apex.webp",
     designLink:
       "https://www.figma.com/design/2PYQjhHzz4uJwLBMiecFPc/Apex-Games-Website-Design?node-id=3254-593&t=vB1E4SNpAi5lii4H-0",
   },
@@ -158,7 +158,7 @@ export const projectsData: ProjectProps[] = [
       "A personal finance management app that helps users track expenses, create budgets, and achieve their financial goals through smart insights.",
     date: "Dec 2024",
     category: "Mobile Apps",
-    image: "/projects/lets-go.png",
+    image: "/projects/lets-go.webp",
     designLink:
       "https://www.figma.com/design/A9nhW1XmhXQP40a8kEicEX/BUDGET-APP?node-id=5-652&t=IbVx399av4gF3NTW-1",
   },
@@ -169,7 +169,7 @@ export const projectsData: ProjectProps[] = [
       "A social media growth platform designed to help content creators and influencers increase their reach and engagement across multiple platforms.",
     date: "Nov 2023",
     category: "Mobile Apps",
-    image: "/projects/f.png",
+    image: "/projects/f.webp",
     designLink:
       "https://www.figma.com/design/c0Yn6a1ElmrXKnZTOGAVnw/FAME-UP?node-id=907-7446&t=R0eEOkPi2XFtyYEU-1",
   },
@@ -180,7 +180,7 @@ export const projectsData: ProjectProps[] = [
       "To make it easy is a real-time home-finding platform of explore all options of rent, buy. Make decisions on the best homes in town, filter by price, and category.",
     date: "Sep 2023",
     category: "Websites",
-    image: "/projects/findee.png",
+    image: "/projects/findee.webp",
     designLink:
       "https://www.figma.com/design/Av2q6XMyilXZfpMoZMclfv/FINDEEHOME?node-id=2327-8815&t=nztldxg8CLlPBq4W-0",
   },
@@ -191,7 +191,7 @@ export const projectsData: ProjectProps[] = [
       "A peer-to-peer rental marketplace where users can rent out or borrow items they need, from tools to electronics, creating a sharing economy.",
     date: "Dec 2022",
     category: "Mobile Apps",
-    image: "/projects/rent-it.png",
+    image: "/projects/rent-it.webp",
     caseStudyLink:
       "https://www.behance.net/gallery/153171783/Renting-Mobile-APpp",
   },
@@ -202,7 +202,7 @@ export const projectsData: ProjectProps[] = [
       "SOLEXE is an NFT Marketplace that sell/buy and borrow/ lend Sneakers. For minting Sneaker NFT on the Blockchain for Free!",
     date: "Aug 2023",
     category: "Web3",
-    image: "/projects/solexe.png",
+    image: "/projects/solexe.webp",
     designLink:
       "https://www.figma.com/design/dGMCxNYPaDDpxVQMrLk0lC/SOLEXE?node-id=119-14432&p=f&t=lKAOHvFXvsmaJwJ5-0",
   },
@@ -213,7 +213,7 @@ export const projectsData: ProjectProps[] = [
       "The website is for pharmacy students at Obafemi Awolowo University to get recent informations from the faculty, and also for connecting with themselves.",
     date: "Jul 2023",
     category: "NGOs",
-    image: "/projects/pans.png",
+    image: "/projects/pans.webp",
     websiteLink: "https://pans-app.netlify.app/",
   },
   {
@@ -223,7 +223,7 @@ export const projectsData: ProjectProps[] = [
       "A technology consulting firm's corporate website showcasing their services, portfolio, and expertise in software development and IT solutions.",
     date: "May 2023",
     category: "Websites",
-    image: "/projects/zdslogic.png",
+    image: "/projects/zdslogic.webp",
     designLink:
       "https://www.figma.com/design/1iRuPcDnea5A63X94WD08R/ZdsLogic-Technologies?node-id=0-1&t=Zvkdps5AXQwAsygE-0",
   },
@@ -234,7 +234,7 @@ export const projectsData: ProjectProps[] = [
       "A gas delivery and booking platform connecting customers with verified gas suppliers for safe and convenient home and business deliveries.",
     date: "Dec 2023",
     category: "Mobile Apps",
-    image: "/projects/afrigas.png",
+    image: "/projects/afrigas.webp",
     designLink:
       "https://www.figma.com/design/VSKETU6DH9Zc2bW8Tq9Irr/AFRIGAS?node-id=19-5438&t=TxG8JRgYDSOLrBN5-0",
   },
@@ -245,7 +245,7 @@ export const projectsData: ProjectProps[] = [
       "DRIP Gaming help in developing the next generation of Blockchain games and building the gaming infrastructure of tomorrow. It offers a wide range of tools and systems.",
     date: "Oct 2022",
     category: "Web3",
-    image: "/projects/drip.png",
+    image: "/projects/drip.webp",
     designLink:
       "https://www.figma.com/design/CZYzL6V5rBXlm3seLN1hcT/DRIP.-Platform-V2?node-id=606-6129&t=kYNW3BnVP1hW3wPT-1",
   },
@@ -256,7 +256,7 @@ export const projectsData: ProjectProps[] = [
       "An integrated healthcare platform providing virtual consultations, appointment scheduling, and prescription management for patients and doctors.",
     date: "Jul 2022",
     category: "Mobile Apps",
-    image: "/projects/quadmed.png",
+    image: "/projects/quadmed.webp",
     caseStudyLink:
       "https://www.behance.net/gallery/154531577/QUADMED-Healthcare-Assistant-AppWebApp",
   },
@@ -267,7 +267,7 @@ export const projectsData: ProjectProps[] = [
       "A platform connecting skilled craftsmen with customers seeking quality services, from plumbing to carpentry, with ratings and secure payments.",
     date: "Aug 2022",
     category: "Mobile Apps",
-    image: "/projects/craftmen.png",
+    image: "/projects/craftmen.webp",
     designLink:
       "https://www.figma.com/design/cppgrAhm5YGHYBGxCCblih/Craftsmen---SkillConnect?node-id=1-33&t=lEbOCAxJOBKWUeby-1",
   },
@@ -278,7 +278,7 @@ export const projectsData: ProjectProps[] = [
       "A comprehensive fitness tracking app with workout plans, gym booking features, progress monitoring, and personalized training recommendations.",
     date: "Nov 2021",
     category: "Mobile Apps",
-    image: "/projects/fitness.png",
+    image: "/projects/fitness.webp",
     caseStudyLink:
       "https://www.behance.net/gallery/150354877/Fitness-Mobile-App-Gym-Booking",
   },
@@ -289,7 +289,7 @@ export const projectsData: ProjectProps[] = [
       "A pet care management app connecting pet owners with veterinarians, offering appointment booking, health records, and emergency services.",
     date: "Jul 2021",
     category: "Mobile Apps",
-    image: "/projects/vetifly.png",
+    image: "/projects/vetifly.webp",
     caseStudyLink:
       "https://www.behance.net/gallery/149347369/Vetifly-App-Redesign",
   },
@@ -300,7 +300,7 @@ export const projectsData: ProjectProps[] = [
       "A smart gardening app that helps plant enthusiasts identify plants, get care tips, track watering schedules, and connect with other gardeners.",
     date: "Jun 2021",
     category: "Mobile Apps",
-    image: "/projects/e-plant.png",
+    image: "/projects/e-plant.webp",
     designLink:
       "https://www.figma.com/design/MxqBP5TJp6c4yXriSkTrSC/E-Plant?node-id=0-1&p=f&t=ySvkdTGYRs5EYcJs-0",
   },
@@ -311,7 +311,7 @@ export const projectsData: ProjectProps[] = [
       "A feature-rich e-commerce mobile application with product browsing, secure checkout, order tracking, and personalized shopping recommendations.",
     date: "Sep 2021",
     category: "Mobile Apps",
-    image: "/projects/e-shop.png",
+    image: "/projects/e-shop.webp",
     caseStudyLink:
       "https://www.behance.net/gallery/148565827/E-Shop-E-Commerce-Mobile-App",
   },
@@ -322,7 +322,7 @@ export const projectsData: ProjectProps[] = [
       "An educational communication platform designed for students and teachers to collaborate, share resources, and maintain class discussions securely.",
     date: "Dec 2021",
     category: "Mobile Apps",
-    image: "/projects/classchat.png",
+    image: "/projects/classchat.webp",
     caseStudyLink:
       "https://www.behance.net/gallery/143239201/Classchat-Chatting-App",
   },
@@ -333,7 +333,7 @@ export const projectsData: ProjectProps[] = [
       "A student networking platform that facilitates academic collaboration, resource sharing, and peer-to-peer learning for university students.",
     date: "May 2021",
     category: "Mobile Apps",
-    image: "/projects/scholar-padi.png",
+    image: "/projects/scholar-padi.webp",
     designLink:
       "https://www.figma.com/design/4v1VvTnEaeHG0NG6i9S0cC/Scholar-s-Padi?node-id=113-5780&t=OSunoY6nKiNXfXoW-0",
   },
@@ -344,7 +344,7 @@ export const projectsData: ProjectProps[] = [
       "A comprehensive travel planning and booking app with itinerary management, destination guides, and travel recommendations for explorers.",
     date: "Dec 2020",
     category: "Mobile Apps",
-    image: "/projects/duro-travel.png",
+    image: "/projects/duro-travel.webp",
     caseStudyLink:
       "https://www.behance.net/gallery/141871005/DuroTravel-UIUX-CASE-STUDY",
   },
