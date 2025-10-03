@@ -11,6 +11,7 @@ import GetInTouch from "./sections/GetInTouch";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import BackgroundEllipses from "./components/backgroundEllipse";
 
 export default function Home() {
   useEffect(() => {
@@ -26,7 +27,9 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       <Navbar />
       <SocialLinks />
-      <main>
+      <BackgroundEllipses />
+
+      <main className="relative z-10">
         <Hero />
         <About />
         <Companies />
