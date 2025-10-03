@@ -1,6 +1,5 @@
 import React from "react";
 import { CalendarIcon } from "@/components/icons";
-import Tag from "@/components/ui/tag";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
@@ -17,8 +16,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
       data-aos="fade-up"
       data-aos-delay={index * 50}
     >
-      <div className="backdrop-blur-sm rounded-xl border border-white/30 bg-transparent transition-all duration-300 w-full overflow-hidden hover:border-white/50">
-        {/* Project Image */}
+      <div className="backdrop-blur-sm rounded-b-xl rounded-t-4xl border border-white/30 bg-transparent transition-all duration-300 w-full overflow-hidden hover:border-white/50 h-full relative">
         <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden">
           <Image
             src={project.image}
@@ -26,32 +24,32 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" /> */}
         </div>
 
-        {/* Project Content */}
-        <div className="p-6">
-          {/* Date Tag */}
-          <Tag className="mb-4">
-            <CalendarIcon />
-            <span>{project.date}</span>
-          </Tag>
+        <div className="p-6 flex flex-col  justify-start items-start h-full relative">
+          <>
+            <div className="mb-2 border-none px-0 py-0 m-0 flex flex-row items-center gap-2">
+              <CalendarIcon />
+              <span>{project.date}</span>
+            </div>
 
-          <div className="flex items-center gap-2 mb-2 font-sora">
-            <span className="text-lg font-semibold text-custom-gradient">
-              {project.title}
-            </span>
-          </div>
-          {/* Project Description */}
-          <p className="text-white/75 text-sm leading-relaxed mb-6 font-sora">
-            {project.description}
-          </p>
+            <div className="flex items-center gap-2  font-sora">
+              <span className="text-lg font-semibold text-custom-gradient">
+                {project.title}
+              </span>
+            </div>
+            <p className="text-white/75 text-sm leading-relaxed mb-4 font-sora">
+              {project.description}
+            </p>
+          </>
 
-          {/* Action Buttons */}
-          <div className="flex gap-3 flex-wrap text-sm text-center mx-auto justify-center">
+          <div className="flex gap-3 flex-wrap text-sm text-center mx-auto justify-center justify-self-end">
             {project.websiteLink && (
               <Link
                 className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
                 href={project.websiteLink}
               >
                 <span className="text-custom-gradient">View Website</span>
@@ -61,6 +59,8 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
             {project.designLink && (
               <Link
                 className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
                 href={project.designLink}
               >
                 <span className="text-custom-gradient">View Design</span>
@@ -70,6 +70,8 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
             {project.githubLink && (
               <Link
                 className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
                 href={project.githubLink}
               >
                 <span className="text-custom-gradient">View Github</span>
@@ -79,6 +81,8 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
             {project.threadLink && (
               <Link
                 className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
                 href={project.threadLink}
               >
                 <span className="text-custom-gradient">Reply Thread</span>
@@ -88,6 +92,8 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
             {project.caseStudyLink && (
               <Link
                 className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
                 href={project.caseStudyLink}
               >
                 <span className="text-custom-gradient">View Case Study</span>
@@ -97,6 +103,8 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
             {project.prototypeLink && (
               <Link
                 className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer"
                 href={project.prototypeLink}
               >
                 <span className="text-custom-gradient">View Prototype</span>

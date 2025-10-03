@@ -9,10 +9,10 @@ const companiesData: Company[] = [
     name: "PharmaBin",
     logo: (
       <Image
-        src="/companies/pharmabin.svg"
+        src="/companies/pharmabin.png"
         alt="PharmaBin"
-        width={24}
-        height={24}
+        width={32}
+        height={32}
         className="object-contain"
       />
     ),
@@ -22,10 +22,10 @@ const companiesData: Company[] = [
     name: "Apex Games",
     logo: (
       <Image
-        src="/companies/apex.svg"
+        src="/companies/apex.png"
         alt="Apex Games"
-        width={24}
-        height={24}
+        width={32}
+        height={32}
         className="object-contain"
       />
     ),
@@ -35,10 +35,10 @@ const companiesData: Company[] = [
     name: "BitQuid Labs",
     logo: (
       <Image
-        src="/companies/bitquid.svg"
+        src="/companies/bitquid.png"
         alt="BitQuid Labs"
-        width={24}
-        height={24}
+        width={32}
+        height={32}
         className="object-contain"
       />
     ),
@@ -49,10 +49,10 @@ const companiesData: Company[] = [
     name: "",
     logo: (
       <Image
-        src="/companies/jimoh.svg"
+        src="/companies/jimoh.png"
         alt="Jimoh"
-        width={70}
-        height={24}
+        width={90}
+        height={32}
         className="object-contain"
       />
     ),
@@ -62,10 +62,10 @@ const companiesData: Company[] = [
     name: "",
     logo: (
       <Image
-        src="/companies/drip.svg"
+        src="/companies/drip.png"
         alt="Drip"
-        width={70}
-        height={24}
+        width={90}
+        height={32}
         className="object-contain"
       />
     ),
@@ -76,10 +76,10 @@ const companiesData: Company[] = [
     name: "ZdsLogic Technologies",
     logo: (
       <Image
-        src="/companies/zds.svg"
+        src="/companies/zds.png"
         alt="ZdsLogic"
-        width={24}
-        height={24}
+        width={32}
+        height={32}
         className="object-contain"
       />
     ),
@@ -89,10 +89,10 @@ const companiesData: Company[] = [
     name: "Al-Burhan Media",
     logo: (
       <Image
-        src="/companies/burhan.svg"
+        src="/companies/burhan.png"
         alt="Burhan"
-        width={24}
-        height={24}
+        width={32}
+        height={32}
         className="object-contain"
       />
     ),
@@ -103,10 +103,10 @@ const companiesData: Company[] = [
     name: "PANS OAU",
     logo: (
       <Image
-        src="/companies/pans.svg"
+        src="/companies/pans.png"
         alt="PANS OAU"
-        width={24}
-        height={24}
+        width={32}
+        height={32}
         className="object-contain"
       />
     ),
@@ -117,10 +117,10 @@ const companiesData: Company[] = [
     name: "",
     logo: (
       <Image
-        src="/companies/upwork.svg"
+        src="/companies/upwork.png"
         alt="Upwork"
-        width={70}
-        height={24}
+        width={90}
+        height={32}
         className="object-contain"
       />
     ),
@@ -130,10 +130,10 @@ const companiesData: Company[] = [
     name: "MSSN OAU",
     logo: (
       <Image
-        src="/companies/mssn.svg"
+        src="/companies/mssn.png"
         alt="Mssn"
-        width={24}
-        height={24}
+        width={32}
+        height={32}
         className="object-contain"
       />
     ),
@@ -141,13 +141,13 @@ const companiesData: Company[] = [
 
   {
     id: 11,
-    name: "ClientTrip",
+    name: "",
     logo: (
       <Image
-        src="/companies/clienttrip.svg"
+        src="/companies/clienttrip.png"
         alt="ClientTrip"
-        width={24}
-        height={24}
+        width={90}
+        height={32}
         className="object-contain"
       />
     ),
@@ -157,10 +157,10 @@ const companiesData: Company[] = [
     name: "",
     logo: (
       <Image
-        src="/companies/solexe.svg"
+        src="/companies/solexe.png"
         alt="Solexe"
-        width={70}
-        height={24}
+        width={90}
+        height={32}
         className="object-contain"
       />
     ),
@@ -219,7 +219,7 @@ const CompaniesCard = () => {
             >
               <Tag
                 size="xl"
-                className="hover:border-white/50 transition-colors duration-300 cursor-pointer h-20"
+                className="hover:border-white/50 transition-colors duration-300 cursor-pointer h-20 "
               >
                 {company.logo}
                 <span>{company.name}</span>
@@ -244,7 +244,7 @@ const CompaniesCard = () => {
             <div key={`slow-${company.id}-${index}`} className="flex-shrink-0">
               <Tag
                 size="xl"
-                className="hover:border-white/50 transition-colors duration-300 cursor-pointer h-20"
+                className="hover:border-white/50 transition-colors duration-300 cursor-pointer h-20 flex justify-center"
               >
                 {company.logo}
                 <span>{company.name}</span>

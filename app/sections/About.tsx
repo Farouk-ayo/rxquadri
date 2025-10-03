@@ -97,10 +97,7 @@ const AboutSection = () => {
         </div>
       </div>
       {/* TAB  */}
-      <div
-        className="flex gap-2 md:gap-4 md:mb-12 justify-center py-10 md:py-8 md:mt-28 max-w-7xl mx-auto"
-        data-aos="fade-up"
-      >
+      <div className="flex gap-2 md:gap-4 md:mb-12 justify-center py-10 md:py-8 md:mt-28 max-w-7xl mx-auto">
         {tabs.map((tab) => (
           <Button
             key={tab.name}

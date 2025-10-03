@@ -60,10 +60,7 @@ const Projects = () => {
         <SectionHeader number="3" title="Projects" align="left" />
 
         {/* Filter Tabs */}
-        <div
-          className="flex justify-center mb-8 max-w-7xl mx-auto px-4"
-          data-aos="fade-up"
-        >
+        <div className="flex justify-center mb-8 max-w-7xl mx-auto px-4">
           <div className="flex gap-2 sm:gap-4 flex-wrap flex-1 max-w-full">
             {categories.map((category) => (
               <Button
@@ -94,17 +91,14 @@ const Projects = () => {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div
-            className="flex justify-center items-center gap-2 mt-12"
-            data-aos="fade-up"
-          >
+          <div className="flex justify-center items-center gap-2 mt-12">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <button
                 key={page}
                 onClick={() => handlePageChange(page)}
-                className={`w-10 h-10 rounded-full flex items-center justify-center font-medium transition-all duration-300 ${
+                className={`w-10 h-10 lg:w-13 lg:h-13 rounded-full flex items-center justify-center font-medium text-2xl transition-all duration-300 cursor-pointer font-sora ${
                   currentPage === page
-                    ? "bg-gradient-to-r from-orange-400 to-red-500 text-white"
+                    ? "bg-custom-gradient text-white"
                     : "border border-white/30 text-white/75 hover:border-white/50 hover:text-white"
                 }`}
               >
