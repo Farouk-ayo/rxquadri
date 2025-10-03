@@ -8,6 +8,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Aug 2025",
     category: "Innovation Challenge",
     image: "/achievements/medlenna.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_sayphin-mentalhealth-nutrition-activity-7362917786454568962-U0vW",
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Aug 2025",
     category: "Professional",
     image: "/achievements/oac.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_pharmabin-innovationinaction-healthcarerevolution-activity-7365776662061342723-Otmp",
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Aug 2025",
     category: "Innovation Challenge",
     image: "/achievements/iyd.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_climatehealthafrica-youthvoices2025-africaclimatehealthweek2025-activity-7361699799680638976-ILXA",
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Jul 2025",
     category: "Professional",
     image: "/achievements/research-fair.webp",
+    link: "https://www.linkedin.com/posts/pharmabin-ng_virtualsession-physicalfair-sdgs-ugcPost-7357417779081179137-LA-L",
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Jun 2025",
     category: "Professional",
     image: "/achievements/yrh.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_pharmabin-src2025-researchinnovation-activity-7342630325631512578-Ff18",
   },
   {
     id: 6,
@@ -56,6 +61,7 @@ export const achievementsData: AchievementProps[] = [
     date: "May 2025",
     category: "Innovation Challenge",
     image: "/achievements/prototype.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_pharmaceuticalwastedisposal-climatechange-activity-7333593105826295813-V2IH",
   },
   {
     id: 7,
@@ -65,6 +71,7 @@ export const achievementsData: AchievementProps[] = [
     date: "May 2025",
     category: "Innovation Challenge",
     image: "/achievements/brandentity.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_brandentity-pharmabin-innovationinhealth-activity-7329073230328033280-Nxly",
   },
   {
     id: 8,
@@ -75,6 +82,7 @@ export const achievementsData: AchievementProps[] = [
     date: "May 2025",
     category: "Innovation Challenge",
     image: "/achievements/iif.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_pharmabinng-oau-sdg3-activity-7326996608779214848-v3Qo",
   },
   {
     id: 9,
@@ -85,6 +93,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Apr 2025",
     category: "Innovation Challenge",
     image: "/achievements/234.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_pharmabin-innovation-publichealth-activity-7320719641532686336-WLKj",
   },
   {
     id: 10,
@@ -94,6 +103,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Mar 2025",
     category: "Hackathon",
     image: "/achievements/innov8.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_sdg3-sdg6-sdg12-activity-7314228662755590145-ZDsM",
   },
   {
     id: 11,
@@ -103,6 +113,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Feb 2025",
     category: "Innovation Challenge",
     image: "/achievements/hult.webp",
+    link: "https://www.linkedin.com/posts/pharmabin-ng_pagia2024-mtshackathon-hultprizeoncampusprogram-activity-7305891705696739328-FlEh",
   },
   {
     id: 12,
@@ -113,6 +124,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Feb 2025",
     category: "Hackathon",
     image: "/achievements/mts.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_pharmabin-healthtech-sustainability-ugcPost-7294477795068436480-6e4S",
   },
   {
     id: 13,
@@ -123,6 +135,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Dec 2024",
     category: "Innovation Challenge",
     image: "/achievements/pagia.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_pharmaceuticalinnovation-pagia2024-pharmacyleadership-activity-7279065184764055552-9y6M",
   },
   {
     id: 14,
@@ -132,6 +145,7 @@ export const achievementsData: AchievementProps[] = [
     date: "Oct 2024",
     category: "Hackathon",
     image: "/achievements/bounty.webp",
+    link: "https://x.com/DUROSINMIQUADR1/status/1850272920163029496",
   },
   {
     id: 15,
@@ -141,5 +155,6 @@ export const achievementsData: AchievementProps[] = [
     date: "Oct 2024",
     category: "Hackathon",
     image: "/achievements/cheddar.webp",
+    link: "https://www.linkedin.com/posts/quadri-durosinmi_excited-to-share-that-im-one-of-the-winners-activity-7247001659090886656-3Ihk",
   },
 ];

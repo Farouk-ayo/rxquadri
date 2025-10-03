@@ -26,8 +26,8 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
           />
         </div>
 
-        <div className="p-6 flex flex-col  justify-start items-start h-full relative">
-          <>
+        <div className="p-6 flex flex-col justify-between items-center ">
+          <div>
             <div className="mb-2 border-none px-0 py-0 m-0 flex flex-row items-center gap-2">
               <CalendarIcon />
               <span>{project.date}</span>
@@ -41,9 +41,9 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
             <p className="text-white/75 text-sm leading-relaxed mb-4 font-sora">
               {project.description}
             </p>
-          </>
+          </div>
 
-          <div className="flex gap-3 flex-wrap text-sm text-center mx-auto justify-center justify-self-end">
+          <div className="flex gap-3 flex-wrap text-sm text-center ">
             {project.websiteLink && (
               <Link
                 className="flex items-center gap-1 transition-colors duration-200 hover:opacity-80"

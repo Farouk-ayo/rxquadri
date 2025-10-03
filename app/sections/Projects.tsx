@@ -6,7 +6,8 @@ import { projectsData } from "@/data/projects";
 import ProjectCard from "../components/projectCard";
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState<string>("All Projects");
+  const [activeFilter, setActiveFilter] =
+    useState<ProjectCategory>("All Projects");
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 6;
 
@@ -14,26 +15,29 @@ const Projects = () => {
     { name: "All Projects", count: projectsData.length },
     {
       name: "Websites",
-      count: projectsData.filter((p) => p.category === "Websites").length,
+      count: projectsData.filter((p) => p.category.includes("Websites")).length,
     },
     {
       name: "Mobile Apps",
-      count: projectsData.filter((p) => p.category === "Mobile Apps").length,
+      count: projectsData.filter((p) => p.category.includes("Mobile Apps"))
+        .length,
     },
     {
       name: "Web3",
-      count: projectsData.filter((p) => p.category === "Web3").length,
+      count: projectsData.filter((p) => p.category.includes("Web3")).length,
     },
     {
       name: "NGOs",
-      count: projectsData.filter((p) => p.category === "NGOs").length,
+      count: projectsData.filter((p) => p.category.includes("NGOs")).length,
     },
   ];
 
   const filteredProjects =
     activeFilter === "All Projects"
       ? projectsData
-      : projectsData.filter((project) => project.category === activeFilter);
+      : projectsData.filter((project) =>
+          project.category.includes(activeFilter)
+        );
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
@@ -61,13 +65,15 @@ const Projects = () => {
 
         {/* Filter Tabs */}
         <div className="flex justify-center mb-8 max-w-7xl mx-auto px-4">
-          <div className="flex gap-2 sm:gap-4 flex-wrap flex-1 max-w-full">
+          <div className="flex justify-center  gap-2 sm:gap-4 flex-wrap flex-1 max-w-full">
             {categories.map((category) => (
               <Button
                 key={category.name}
                 size="lgMb"
                 variant={activeFilter === category.name ? "filled" : "base"}
-                onClick={() => setActiveFilter(category.name)}
+                onClick={() =>
+                  setActiveFilter(category.name as ProjectCategory)
+                }
                 className={`relative min-w-36 md:min-w-52 flex-shrink-0 ${
                   !(activeFilter === category.name)
                     ? "text-white/75 border-white/30 bg-transparent border-2 hover:border-transparent hover-border-custom-gradient hover-text-custom-gradient"

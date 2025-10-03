@@ -35,7 +35,7 @@ const GetInTouch = () => {
                 me an email to{" "}
                 <button
                   onClick={handleEmailClick}
-                  className="text-custom-red underline-offset-4"
+                  className="text-custom-red underline-offset-4 cursor-pointer"
                 >
                   durosinmiquadril@gmail.com
                 </button>

@@ -65,7 +65,7 @@ const Achievements = () => {
 
         {/* Filter Tabs */}
         <div className="flex justify-center mb-8 max-w-7xl mx-auto px-4">
-          <div className="flex gap-2 sm:gap-4 flex-wrap flex-1 max-w-full">
+          <div className="flex justify-center  gap-2 sm:gap-4 flex-wrap flex-1 max-w-full">
             {categories.map((category) => (
               <Button
                 key={category.name}

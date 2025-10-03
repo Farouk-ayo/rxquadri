@@ -29,12 +29,19 @@ interface Company {
   logo: React.ReactNode;
 }
 
+type ProjectCategory =
+  | "All Projects"
+  | "Websites"
+  | "Mobile Apps"
+  | "Web3"
+  | "NGOs";
+
 interface ProjectProps {
   id: number;
   title: string;
   description: string;
   date: string;
-  category: "All Projects" | "Websites" | "Mobile Apps" | "Web3" | "NGOs";
+  category: ProjectCategory[];
   image: string;
   websiteLink?: string;
   designLink?: string;
@@ -56,4 +63,5 @@ interface AchievementProps {
     | "Innovation Challenge"
     | "Professional";
   image?: string;
+  link?: string;
 }

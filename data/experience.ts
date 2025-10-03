@@ -7,7 +7,7 @@ export const experienceData: ExperienceProps[] = [
     location: "Hybrid, Nigeria",
     responsibilities: [
       "Spearheading the design and technology strategy for Nigeria’s first digital pharmaceutical waste management and blister pack recycling platform.",
-      `Built the company’s official website <a href="https://pharmabin.com" target="_blank" rel="noopener noreferrer" class="text-orange-500  underline">(Live Website)</a> and digital interface, setting design guidelines and usability standards that ensure accessibility, sustainability, and scalability.`,
+      `Built the company’s official website <a href="https://pharmabin.org" target="_blank" rel="noopener noreferrer" class="text-orange-500  underline">(Live Website)</a> and digital interface, setting design guidelines and usability standards that ensure accessibility, sustainability, and scalability.`,
       "Developed product prototypes showcased at national innovation hackathons, earning recognition for healthtech and circular economy innovation.",
       "Leading cross-functional teams in refining the recycling pipeline for blister packs, integrating SDG-aligned practices into product development.",
       "Driving community pharmacy partnerships to expand adoption and reduce improper disposal of medicines while fostering environmental sustainability.",
@@ -45,7 +45,7 @@ export const experienceData: ExperienceProps[] = [
     company: "Apex Games",
     location: "Remote, United States",
     responsibilities: [
-      `Designed the official website for Apex Games  <a href="https://www.figma.com/design/2PYQjhHzz4uJwLBMiecFPc/Apex-Games-Website-Design?node-id=79-6&t=jRG1Gz0yLsx7hCxl-1" target="_blank" rel="noopener noreferrer" class="text-orange-500  underline">(Live Website)</a>, ensuring a seamless brand experience for gaming communities.`,
+      `Designed the official website for Apex Games  <a href="https://www.figma.com/design/2PYQjhHzz4uJwLBMiecFPc/Apex-Games-Website-Design?node-id=79-6&t=jRG1Gz0yLsx7hCxl-1" target="_blank" rel="noopener noreferrer" class="text-orange-500  underline">(Figma Link)</a>, ensuring a seamless brand experience for gaming communities.`,
       "Collaborated with cross-border development teams to align front-end design and gamified user experiences.",
     ],
   },

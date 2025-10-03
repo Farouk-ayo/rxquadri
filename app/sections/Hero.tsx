@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          &quot;I &apos;m A UI/UX Designer Passionate About Creating Intuitive,
+          &quot;I&apos;m A UI/UX Designer Passionate About Creating Intuitive,
           Impactful Digital Experiences That Solve Real-World Problems. Beyond
           Design, I Founded{" "}
           <span className="text-custom-red font-normal">PharmaBin</span> And
@@ -72,29 +72,28 @@ const Hero: React.FC = () => {
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          <Button
-            variant="filled"
-            size="lg"
-            className="cursor-pointer min-w-56"
-          >
-            <Link href={"#projects"} className="">
+          <Link href="#projects">
+            <Button
+              variant="filled"
+              size="lg"
+              className="cursor-pointer min-w-56"
+            >
               View Projects
-            </Link>
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="cursor-pointer min-w-56"
+            </Button>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/durosinmi-quadri-a5464921b"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Link
-              href={"https://www.linkedin.com/in/durosinmi-quadri-a5464921b"}
-              className=""
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button
+              variant="outline"
+              size="lg"
+              className="cursor-pointer min-w-56"
             >
               Get In Touch
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

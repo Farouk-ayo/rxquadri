@@ -54,15 +54,15 @@ const Navbar = () => {
               </Button>
             ))}
             <li className="hidden lg:inline-block">
-              <Button variant={"outline"} size="lg">
-                <Link
-                  href="https://docs.google.com/document/d/1Z-aqLCN-KvgNMGIzbvAffMW-xkILXndU1ik47ulL1VQ/edit?tab=t.0 "
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+              <Link
+                href="https://docs.google.com/document/d/1Z-aqLCN-KvgNMGIzbvAffMW-xkILXndU1ik47ulL1VQ/edit?tab=t.0 "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant={"outline"} size="lg">
                   Resume
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -103,16 +103,16 @@ const Navbar = () => {
                 </Link>
               </Button>
             ))}
-            <Button variant={"outline"} onClick={toggleMenu}>
-              <Link
-                href="https://docs.google.com/document/d/1Z-aqLCN-KvgNMGIzbvAffMW-xkILXndU1ik47ulL1VQ/edit?tab=t.0 "
-                className=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <Link
+              href="https://docs.google.com/document/d/1Z-aqLCN-KvgNMGIzbvAffMW-xkILXndU1ik47ulL1VQ/edit?tab=t.0 "
+              className=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant={"outline"} onClick={toggleMenu}>
                 Resume
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </nav>
         </motion.div>
       </motion.div>

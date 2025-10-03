@@ -46,10 +46,9 @@ const AboutSection = () => {
             data-aos="fade-right"
           >
             <p className="text-base sm:text-[20px] leading-relaxed">
-              Hello! I&apos;m Quadri , a UI/UX Designer, an Affiliate
-              Pharmacist, and Youth Advocate for the UN Sustainable Development
-              Goals (SDGs). I am passionate about solving problems at the
-              intersection of healthcare, technology, and sustainability.
+              Hello! I&apos;m Quadri, a UI/UX Designer and a Pharmacist. I am
+              passionate about solving problems at the intersection of
+              healthcare, technology, and sustainability.
             </p>
 
             <p className="text-base sm:text-[20px] leading-relaxed">
