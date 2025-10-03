@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Archivo, Rubik, Sora } from "next/font/google";
 import "./globals.css";
 import SplashScreenManager from "./components/splashScreenManager";
+import { Analytics } from "@vercel/analytics/next";
 
 export const rubik = Rubik({
   subsets: ["latin"],
@@ -134,6 +135,7 @@ export default function RootLayout({
         <SplashScreenManager>
           <main className=" ">{children}</main>
         </SplashScreenManager>
+        <Analytics />
       </body>
     </html>
   );
