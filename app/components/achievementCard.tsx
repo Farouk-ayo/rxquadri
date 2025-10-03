@@ -18,7 +18,7 @@ export const AchievementCard = ({
       data-aos="fade-up"
       data-aos-delay={index * 50}
     >
-      <div className="relative backdrop-blur-sm rounded-xl border border-white/30 bg-transparent transition-all duration-300 w-full overflow-hidden hover:border-white/50 min-h-[500px] h-full">
+      <div className="relative backdrop-blur-sm rounded-xl border border-white/30 bg-transparent transition-all duration-300 w-full overflow-hidden hover:border-white/50 min-h-[450px] md:min-h-[500px] h-full">
         <div className="absolute inset-0 w-full h-[80%]">
           <Image
             src={achievement.image || ""}
@@ -30,16 +30,16 @@ export const AchievementCard = ({
         </div>
         <div className="relative z-10 p-6 flex flex-col justify-end h-full">
           <div className=" h-[50%]">
-            <Tag className="mb-4 w-fit">
+            <Tag className="mb-4 w-fit text-base ">
               <CalendarIcon />
               <span>{achievement.date}</span>
             </Tag>
 
-            <h3 className="text-lg font-semibold text-custom-gradient mb-2 font-sora">
+            <h3 className="text-base md:text-lg font-semibold text-custom-gradient mb-2 font-sora">
               {achievement.title}
             </h3>
 
-            <p className="text-white/75 text-sm leading-relaxed font-sora">
+            <p className="text-white/75 text-xs md:text-sm leading-relaxed font-sora">
               {achievement.description}
             </p>
           </div>
