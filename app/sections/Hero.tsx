@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
             </Button>
           </Link>
           <Link
-            href="https://www.linkedin.com/in/durosinmi-quadri-a5464921b"
+            href="https://www.linkedin.com/in/quadri-durosinmi/"
             target="_blank"
             rel="noopener noreferrer"
           >

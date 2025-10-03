@@ -14,7 +14,7 @@ import Image from "next/image";
 export const socialLinks = [
   {
     icon: <LinkedInIcon />,
-    href: "https://www.linkedin.com/in/durosinmi-quadri-a5464921b",
+    href: "https://www.linkedin.com/in/quadri-durosinmi/",
     label: "LinkedIn",
   },
   {

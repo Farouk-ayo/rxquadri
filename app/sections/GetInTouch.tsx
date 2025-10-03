@@ -80,7 +80,7 @@ const GetInTouch = () => {
               <button
                 onClick={() =>
                   window.open(
-                    "https://www.linkedin.com/in/durosinmi-quadri-a5464921b",
+                    "https://www.linkedin.com/in/quadri-durosinmi/",
                     "_blank"
                   )
                 }
