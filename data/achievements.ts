@@ -7,7 +7,7 @@ export const achievementsData: AchievementProps[] = [
       "Won in the Mental Health Track by presenting the MindVolta App. As a student to support undergraduates battling depression, anxiety and other mental health challenges.",
     date: "Aug 2025",
     category: "Innovation Challenge",
-    image: "/achievements/medlenna.jpg",
+    image: "/achievements/medlenna.webp",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const achievementsData: AchievementProps[] = [
       "One of the winners at Obafemi Awolowo Awolowo Chukwu PANS National Research Mentorship Program, won with my Undergraduate Research Thesis.",
     date: "Aug 2025",
     category: "Professional",
-    image: "/achievements/oac.jpg",
+    image: "/achievements/oac.webp",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const achievementsData: AchievementProps[] = [
       "Recognized by the Digital Health Africa as one of the Top 10 African Youth Voices in Climate Health Innovation with the title, 'Household Pharmaceutical Waste Management'",
     date: "Aug 2025",
     category: "Innovation Challenge",
-    image: "/achievements/iyd.jpg",
+    image: "/achievements/iyd.webp",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const achievementsData: AchievementProps[] = [
       "Presented the Innovation; PharmaBin at the virtual session and physical fair session organized by Obafemi Awolowo University.",
     date: "Jul 2025",
     category: "Professional",
-    image: "/achievements/research-fair.jpg",
+    image: "/achievements/research-fair.webp",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ export const achievementsData: AchievementProps[] = [
       "Presented the abstract of my Undergraduate Research Thesis at the 2025 conference organized by Young Researchers Hub, OAU.",
     date: "Jun 2025",
     category: "Professional",
-    image: "/achievements/yrh.jpg",
+    image: "/achievements/yrh.webp",
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ export const achievementsData: AchievementProps[] = [
       "Exhibited the take-back arrangement materials (branded waste-bins & stickers) to show how this program can work.",
     date: "May 2025",
     category: "Innovation Challenge",
-    image: "/achievements/prototype.jpg",
+    image: "/achievements/prototype.webp",
   },
   {
     id: 7,
@@ -64,7 +64,7 @@ export const achievementsData: AchievementProps[] = [
       "Won the 1st place at the Brandentity Pitch Competition Conference organized by Great Ife Student Union, Obafemi Awolowo University.",
     date: "May 2025",
     category: "Innovation Challenge",
-    image: "/achievements/brandentity.jpg",
+    image: "/achievements/brandentity.webp",
   },
   {
     id: 8,
@@ -74,7 +74,7 @@ export const achievementsData: AchievementProps[] = [
       "Won the 1st place at the STEM Conference organized by STEM-AKADEMI, by Profs at OAU and represented the school at the Grand Finale at Redeemer's University.",
     date: "May 2025",
     category: "Innovation Challenge",
-    image: "/achievements/iif.jpg",
+    image: "/achievements/iif.webp",
   },
   {
     id: 9,
@@ -84,7 +84,7 @@ export const achievementsData: AchievementProps[] = [
       "Recognized by the 234 Community during the Impact Challenge 4.0 as the top 50 winners with the pharmaceutical waste management innovation.",
     date: "Apr 2025",
     category: "Innovation Challenge",
-    image: "/achievements/234.jpg",
+    image: "/achievements/234.webp",
   },
   {
     id: 10,
@@ -93,7 +93,7 @@ export const achievementsData: AchievementProps[] = [
       "Won the 2nd place while participating with the PharmaBin project and Blinke stack recycling innovation which is a novel one in Nigeria.",
     date: "Mar 2025",
     category: "Hackathon",
-    image: "/achievements/innov8.jpg",
+    image: "/achievements/innov8.webp",
   },
   {
     id: 11,
@@ -102,7 +102,7 @@ export const achievementsData: AchievementProps[] = [
       "Won the 1st place at Hult-Prize On-Campus organized by Al-Hikmah University and represented the school at the National Level that held at UNILAG.",
     date: "Feb 2025",
     category: "Innovation Challenge",
-    image: "/achievements/hult.jpg",
+    image: "/achievements/hult.webp",
   },
   {
     id: 12,
@@ -112,7 +112,7 @@ export const achievementsData: AchievementProps[] = [
       "Participated with the PharmaWin website - that connects the households with the collection points for safe disposal of pharmaceutical waste.",
     date: "Feb 2025",
     category: "Hackathon",
-    image: "/achievements/mts.jpg",
+    image: "/achievements/mts.webp",
   },
   {
     id: 13,
@@ -122,7 +122,7 @@ export const achievementsData: AchievementProps[] = [
       "Won the 1st place at the Pharmacists' Affairs Group Innovative Award (PAGIA 2024) organized by the Pharmacists' Affairs Group.",
     date: "Dec 2024",
     category: "Innovation Challenge",
-    image: "/achievements/pagia.jpg",
+    image: "/achievements/pagia.webp",
   },
   {
     id: 14,
@@ -131,7 +131,7 @@ export const achievementsData: AchievementProps[] = [
       "Won the 4th place at the website redesign for the ZNS Connect - for simplifying web3 by getting domain names for those interested.",
     date: "Oct 2024",
     category: "Hackathon",
-    image: "/achievements/bounty.jpg",
+    image: "/achievements/bounty.webp",
   },
   {
     id: 15,
@@ -140,6 +140,6 @@ export const achievementsData: AchievementProps[] = [
       "Participated in the website redesign for the Cheddar platform. A collaborative social gaming platform for fun and inclusive Web3 experiences.",
     date: "Oct 2024",
     category: "Hackathon",
-    image: "/achievements/cheddar.jpg",
+    image: "/achievements/cheddar.webp",
   },
 ];
