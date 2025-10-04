@@ -36,9 +36,9 @@ const Hero: React.FC = () => {
             <Typewriter
               options={{
                 strings: [
-                  "Founder & CEO @ PharmaBin 🚀",
-                  "Pharmacist 👦",
                   "UI/UX Designer 🎨",
+                  "Project Lead @ PharmaBin 🚀",
+                  "Pharmacist 👦",
                   "Top 10 African Youth Voices in Climate-Health Innovation 🎤",
                   "PAGIA 2024 Awardee 🥇",
                   "SDGs & Climate Action Advocate 🌍",
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
         >
           &quot;I&apos;m A UI/UX Designer Passionate About Creating Intuitive,
           Impactful Digital Experiences That Solve Real-World Problems. Beyond
-          Design, I Founded{" "}
+          Design, I Lead{" "}
           <span className="text-custom-red font-normal">PharmaBin</span> And
           Advocate For Climate Action And SDGs&quot;
         </p>

@@ -2,7 +2,7 @@ export const experienceData: ExperienceProps[] = [
   {
     id: 1,
     period: "Nov 2024- Present",
-    title: "Founder & CEO",
+    title: "Project Lead",
     company: "PharmaBin",
     location: "Hybrid, Nigeria",
     responsibilities: [

@@ -62,13 +62,14 @@ const AboutSection = () => {
             </p>
 
             <p className="text-base sm:text-[20px] leading-relaxed">
-              As Founder of{" "}
+              As the Project Lead of{" "}
               <span className="text-custom-red font-normal">PharmaBin</span>, I
               lead initiatives addressing pharmaceutical waste management
               through digital solutions which also introduces the recycling of
-              empty blister packs. With expertise in Figma, Adobe XD, Web3
-              design, and front-end fundamentals, I am open to collaborations in
-              healthtech, sustainability, and UI/UX design projects.
+              pharmaceutical packaging like empty blister packs. With expertise
+              in Figma, Adobe XD, Web3 design, and front-end fundamentals, I am
+              open to collaborations in healthtech, sustainability, and UI/UX
+              design projects.
             </p>
           </div>
           <div
@@ -123,7 +124,19 @@ const AboutSection = () => {
 
             {/* Experience Cards */}
             <div className="space-y-6">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+              {/* on mobile  */}
+              <div className="lg:hidden space-y-8">
+                {experienceData.map((experience, index) => (
+                  <ExperienceCard
+                    key={experience.id}
+                    experience={experience}
+                    index={index}
+                    isLeft={true}
+                  />
+                ))}
+              </div>
+              {/* on desktop  */}
+              <div className="hidden lg:grid  lg:grid-cols-2 gap-8 lg:gap-20">
                 <div className="space-y-8">
                   {leftColumnExperienceData.map((experience, index) => (
                     <div key={experience.id} className="flex w-full">
