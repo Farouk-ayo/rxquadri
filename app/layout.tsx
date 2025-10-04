@@ -28,7 +28,7 @@ export const archivo = Archivo({
 export const metadata: Metadata = {
   title: "RxQuadri | Product Designer & Healthcare Innovator Portfolio",
   description:
-    "Durosinmi Quadri is a Product Designer specializing in healthcare solutions, Web3 platforms, and sustainable innovation. Co-founder of PharmaBin, advocate for climate action and the SDGs. Explore my design portfolio showcasing UI/UX work across mobile apps, websites, and Web3 projects.",
+    "Durosinmi Quadri is a Product Designer specializing in healthcare solutions, Web3 platforms, and sustainable innovation. Project Lead of PharmaBin, advocate for climate action and the SDGs. Explore my design portfolio showcasing UI/UX work across mobile apps, websites, and Web3 projects.",
   keywords: [
     "RxQuadri",
     "Durosinmi Quadri",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "UI/UX Designer",
     "Healthcare Design",
     "Pharmabin",
-    "PharmaBin Co-founder",
+    "PharmaBin Project Lead",
     "Web3 Designer",
     "Sustainable Innovation",
     "Climate Action Advocate",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RxQuadri | Product Designer & Healthcare Innovator Portfolio",
     description:
-      "Explore the portfolio of Durosinmi Quadri (RxQuadri), a Product Designer creating impactful healthcare solutions, Web3 platforms, and sustainable innovations. Co-founder of PharmaBin and advocate for climate action.",
+      "Explore the portfolio of Durosinmi Quadri (RxQuadri), a Product Designer creating impactful healthcare solutions, Web3 platforms, and sustainable innovations. Project Lead of PharmaBin and advocate for climate action.",
     url: "https://rxquadri.vercel.app",
     type: "website",
     images: [
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RxQuadri | Product Designer & Healthcare Innovator",
     description:
-      "Product Designer specializing in healthcare solutions, Web3 platforms, and sustainable innovation. Co-founder of PharmaBin. Discover my design work and case studies.",
+      "Product Designer specializing in healthcare solutions, Web3 platforms, and sustainable innovation. Project Lead of PharmaBin. Discover my design work and case studies.",
     images: "https://rxquadri.vercel.app/rxquadri-og.webp",
     creator: "@DUROSINMIQUADR1",
   },
