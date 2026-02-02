@@ -1,0 +1,69 @@
+import React, { ReactElement } from "react";
+
+interface ButtonProps {
+  variant?: "filled" | "outline" | "link" | "base";
+  children: React.ReactNode;
+  onClick?: () => void;
+  className?: string;
+  disabled?: boolean;
+  size?: "sm" | "md" | "lg" | "lgMb";
+  asChild?: boolean;
+}
+
+const Button: React.FC<ButtonProps> = ({
+  variant = "base",
+  children,
+  onClick,
+  className = "",
+  disabled = false,
+  size = "md",
+  asChild = false,
+}) => {
+  const baseClasses =
+    " inline-flex font-sora items-center justify-center font-medium rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none cursor-pointer ";
+
+  const sizeClasses = {
+    sm: "px-6 py-2 text-sm",
+    md: "px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-base",
+    lg: "px-8 py-3 text-base sm:px-10 sm:py-4 sm:text-lg",
+    lgMb: "px-6 py-2 text-sm sm:px-10 sm:py-4 sm:text-lg",
+  };
+
+  const variants = {
+    base: "",
+    filled:
+      "bg-custom-gradient text-white shadow-lg hover:shadow-xl hover:opacity-90",
+    outline: "border-custom-gradient text-custom-gradient backdrop-blur-sm",
+    link: "px-0 py-0 hover-text-custom-gradient relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-custom-yellow after:transition-all after:duration-300 hover:after:w-full ",
+  };
+
+  if (asChild) {
+    const child = React.Children.only(children) as ReactElement<{
+      className?: string;
+      onClick?: () => void;
+      disabled?: boolean;
+    }>;
+
+    return React.cloneElement(child, {
+      className: `${baseClasses} ${
+        variant !== "link" ? sizeClasses[size] : ""
+      } ${variants[variant]} ${className}`,
+      onClick,
+      disabled,
+    });
+  }
+
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`${baseClasses} ${
+        variant !== "link" ? sizeClasses[size] : ""
+      } ${variants[variant]} ${className}`}
+    >
+      {children}
+    </button>
+  );
+};
+
+export default Button;

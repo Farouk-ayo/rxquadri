@@ -1,0 +1,130 @@
+"use client";
+import React, { useEffect, useState } from "react";
+import SectionHeader from "../components/sectionHeader";
+import Button from "@/components/ui/button";
+import { projectsData } from "@/data/projects";
+import ProjectCard from "../components/projectCard";
+
+const Projects = () => {
+  const [activeFilter, setActiveFilter] =
+    useState<ProjectCategory>("All Projects");
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 6;
+
+  const categories = [
+    { name: "All Projects", count: projectsData.length },
+    {
+      name: "Websites",
+      count: projectsData.filter((p) => p.category.includes("Websites")).length,
+    },
+    {
+      name: "Mobile Apps",
+      count: projectsData.filter((p) => p.category.includes("Mobile Apps"))
+        .length,
+    },
+    {
+      name: "Web3",
+      count: projectsData.filter((p) => p.category.includes("Web3")).length,
+    },
+    {
+      name: "NGOs",
+      count: projectsData.filter((p) => p.category.includes("NGOs")).length,
+    },
+  ];
+
+  const filteredProjects =
+    activeFilter === "All Projects"
+      ? projectsData
+      : projectsData.filter((project) =>
+          project.category.includes(activeFilter)
+        );
+
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const currentProjects = filteredProjects.slice(
+    startIndex,
+    startIndex + projectsPerPage
+  );
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeFilter]);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  return (
+    <section
+      className="bg-black text-white px-4 sm:px-8 lg:px-16 pt-28 py-12"
+      id="projects"
+    >
+      <div className="max-w-7xl mx-auto">
+        <SectionHeader number="3" title="Projects" align="left" />
+
+        {/* Filter Tabs */}
+        <div className="flex justify-center mb-8 max-w-7xl mx-auto px-4">
+          <div className="flex justify-center  gap-2 sm:gap-4 flex-wrap flex-1 max-w-full">
+            {categories.map((category) => (
+              <Button
+                key={category.name}
+                size="lgMb"
+                variant={activeFilter === category.name ? "filled" : "base"}
+                onClick={() =>
+                  setActiveFilter(category.name as ProjectCategory)
+                }
+                className={`relative min-w-36 md:min-w-52 flex-shrink-0 ${
+                  !(activeFilter === category.name)
+                    ? "text-white/75 border-white/30 bg-transparent border-2 hover:border-transparent hover-border-custom-gradient hover-text-custom-gradient"
+                    : "border-none"
+                }`}
+              >
+                {category.name}
+              </Button>
+            ))}
+          </div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="relative max-w-7xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {currentProjects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+        </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center gap-2 mt-12">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => handlePageChange(page)}
+                className={`w-10 h-10 lg:w-13 lg:h-13 rounded-full flex items-center justify-center font-medium text-2xl transition-all duration-300 cursor-pointer font-sora ${
+                  currentPage === page
+                    ? "bg-custom-gradient text-white"
+                    : "border border-white/30 text-white/75 hover:border-white/50 hover:text-white"
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Empty State */}
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-white/50 text-lg">
+              No projects found in the {activeFilter} category.
+            </p>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

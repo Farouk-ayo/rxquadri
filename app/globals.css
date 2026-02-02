@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --gradient-custom: linear-gradient(121.76deg, #ffde59 15.41%, #ff1616 81.48%);
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --font-rubik: var(--font-rubik), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sora: var(--font-sora), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-archivo: var(--font-archivo), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-custom-yellow: #ffde59;
+  --color-custom-red: #ff1616;
+  --shadow-custom-gradient: 0 10px 25px rgba(255, 222, 89, 0.3),
+    0 6px 12px rgba(255, 22, 22, 0.2);
+}
+
+.bg-custom-gradient {
+  background: var(--gradient-custom);
+}
+
+.border-custom-gradient {
+  position: relative;
+  z-index: 0;
+  background: transparent;
+}
+
+.hover-border-custom-gradient:hover {
+  position: relative;
+  z-index: 0;
+  background: transparent;
+}
+
+.hover-border-custom-gradient:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* border thickness */
+  border-radius: inherit;
+  background: var(--gradient-custom);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.border-custom-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* border thickness */
+  border-radius: inherit;
+  background: var(--gradient-custom);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.text-custom-gradient {
+  background: var(--gradient-custom);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: all 3s;
+}
+
+.hover-text-custom-gradient:hover {
+  background: var(--gradient-custom);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.icon-gradient {
+  background: var(--gradient-custom);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-flex;
+}
+
+#root {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-rubik), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hamburger.open .line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
